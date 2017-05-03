@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CFFE076F1EB8E64200D7E9C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE076E1EB8E64200D7E9C9 /* AppDelegate.swift */; };
-		CFFE07711EB8E64200D7E9C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07701EB8E64200D7E9C9 /* ViewController.swift */; };
-		CFFE07741EB8E64200D7E9C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07721EB8E64200D7E9C9 /* Main.storyboard */; };
-		CFFE07761EB8E64200D7E9C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07751EB8E64200D7E9C9 /* Assets.xcassets */; };
-		CFFE07791EB8E64200D7E9C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07771EB8E64200D7E9C9 /* LaunchScreen.storyboard */; };
+		CF6B1F921EB8EA2600F73CE2 /* CoreAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */; };
+		CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */; };
+		CF6B1F941EB8EAA200F73CE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07B81EB8E79000D7E9C9 /* Main.storyboard */; };
 		CFFE07841EB8E64200D7E9C9 /* SimplePlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07831EB8E64200D7E9C9 /* SimplePlayerTests.swift */; };
 		CFFE078F1EB8E64200D7E9C9 /* SimplePlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE078E1EB8E64200D7E9C9 /* SimplePlayerUITests.swift */; };
+		CFFE07CC1EB8E79000D7E9C9 /* LookAndFeel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07B41EB8E79000D7E9C9 /* LookAndFeel.swift */; };
+		CFFE07D01EB8E79000D7E9C9 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07BB1EB8E79000D7E9C9 /* MenuCollectionViewCell.swift */; };
+		CFFE07D11EB8E79000D7E9C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07BD1EB8E79000D7E9C9 /* AppDelegate.swift */; };
+		CFFE07D21EB8E79000D7E9C9 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07BE1EB8E79000D7E9C9 /* AppRouter.swift */; };
+		CFFE07D41EB8E79000D7E9C9 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07C11EB8E79000D7E9C9 /* MenuItem.swift */; };
+		CFFE07D51EB8E79000D7E9C9 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07C21EB8E79000D7E9C9 /* Video.swift */; };
+		CFFE07D71EB8E79000D7E9C9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07C81EB8E79000D7E9C9 /* MenuViewController.swift */; };
+		CFFE07DA1EB8E8D700D7E9C9 /* MenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07CA1EB8E79000D7E9C9 /* MenuItemViewModel.swift */; };
+		CFFE07DB1EB8E8D700D7E9C9 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07CB1EB8E79000D7E9C9 /* VideoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +41,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CoreAssets.xcassets; sourceTree = "<group>"; };
 		CFFE076B1EB8E64200D7E9C9 /* SimplePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFFE076E1EB8E64200D7E9C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFFE07701EB8E64200D7E9C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CFFE07731EB8E64200D7E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CFFE07751EB8E64200D7E9C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CFFE07781EB8E64200D7E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CFFE077A1EB8E64200D7E9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFFE077F1EB8E64200D7E9C9 /* SimplePlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplePlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFE07831EB8E64200D7E9C9 /* SimplePlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayerTests.swift; sourceTree = "<group>"; };
 		CFFE07851EB8E64200D7E9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFFE078A1EB8E64200D7E9C9 /* SimplePlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplePlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFE078E1EB8E64200D7E9C9 /* SimplePlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayerUITests.swift; sourceTree = "<group>"; };
 		CFFE07901EB8E64200D7E9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFE07B41EB8E79000D7E9C9 /* LookAndFeel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookAndFeel.swift; sourceTree = "<group>"; };
+		CFFE07B71EB8E79000D7E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFFE07B91EB8E79000D7E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFFE07BB1EB8E79000D7E9C9 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		CFFE07BD1EB8E79000D7E9C9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFFE07BE1EB8E79000D7E9C9 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		CFFE07BF1EB8E79000D7E9C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFE07C11EB8E79000D7E9C9 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		CFFE07C21EB8E79000D7E9C9 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		CFFE07C71EB8E79000D7E9C9 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		CFFE07C81EB8E79000D7E9C9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		CFFE07CA1EB8E79000D7E9C9 /* MenuItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemViewModel.swift; sourceTree = "<group>"; };
+		CFFE07CB1EB8E79000D7E9C9 /* VideoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +92,7 @@
 		CFFE07621EB8E64200D7E9C9 = {
 			isa = PBXGroup;
 			children = (
-				CFFE076D1EB8E64200D7E9C9 /* SimplePlayer */,
+				CFFE07B21EB8E79000D7E9C9 /* Sources */,
 				CFFE07821EB8E64200D7E9C9 /* SimplePlayerTests */,
 				CFFE078D1EB8E64200D7E9C9 /* SimplePlayerUITests */,
 				CFFE076C1EB8E64200D7E9C9 /* Products */,
@@ -92,19 +107,6 @@
 				CFFE078A1EB8E64200D7E9C9 /* SimplePlayerUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CFFE076D1EB8E64200D7E9C9 /* SimplePlayer */ = {
-			isa = PBXGroup;
-			children = (
-				CFFE076E1EB8E64200D7E9C9 /* AppDelegate.swift */,
-				CFFE07701EB8E64200D7E9C9 /* ViewController.swift */,
-				CFFE07721EB8E64200D7E9C9 /* Main.storyboard */,
-				CFFE07751EB8E64200D7E9C9 /* Assets.xcassets */,
-				CFFE07771EB8E64200D7E9C9 /* LaunchScreen.storyboard */,
-				CFFE077A1EB8E64200D7E9C9 /* Info.plist */,
-			);
-			path = SimplePlayer;
 			sourceTree = "<group>";
 		};
 		CFFE07821EB8E64200D7E9C9 /* SimplePlayerTests */ = {
@@ -123,6 +125,99 @@
 				CFFE07901EB8E64200D7E9C9 /* Info.plist */,
 			);
 			path = SimplePlayerUITests;
+			sourceTree = "<group>";
+		};
+		CFFE07B21EB8E79000D7E9C9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE07B31EB8E79000D7E9C9 /* Appearance */,
+				CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */,
+				CFFE07B81EB8E79000D7E9C9 /* Main.storyboard */,
+				CFFE07BA1EB8E79000D7E9C9 /* Cells */,
+				CFFE07BC1EB8E79000D7E9C9 /* Core */,
+				CFFE07BF1EB8E79000D7E9C9 /* Info.plist */,
+				CFFE07C01EB8E79000D7E9C9 /* Models */,
+				CFFE07C31EB8E79000D7E9C9 /* Networking */,
+				CFFE07C41EB8E79000D7E9C9 /* Protocols */,
+				CFFE07C51EB8E79000D7E9C9 /* Resources */,
+				CFFE07C61EB8E79000D7E9C9 /* ViewControllers */,
+				CFFE07C91EB8E79000D7E9C9 /* ViewModels */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CFFE07B31EB8E79000D7E9C9 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE07B41EB8E79000D7E9C9 /* LookAndFeel.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		CFFE07BA1EB8E79000D7E9C9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE07BB1EB8E79000D7E9C9 /* MenuCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CFFE07BC1EB8E79000D7E9C9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE07BD1EB8E79000D7E9C9 /* AppDelegate.swift */,
+				CFFE07BE1EB8E79000D7E9C9 /* AppRouter.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CFFE07C01EB8E79000D7E9C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE07C11EB8E79000D7E9C9 /* MenuItem.swift */,
+				CFFE07C21EB8E79000D7E9C9 /* Video.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CFFE07C31EB8E79000D7E9C9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CFFE07C41EB8E79000D7E9C9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CFFE07C51EB8E79000D7E9C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CFFE07C61EB8E79000D7E9C9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE07C71EB8E79000D7E9C9 /* CategoryViewController.swift */,
+				CFFE07C81EB8E79000D7E9C9 /* MenuViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CFFE07C91EB8E79000D7E9C9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE07CA1EB8E79000D7E9C9 /* MenuItemViewModel.swift */,
+				CFFE07CB1EB8E79000D7E9C9 /* VideoViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +327,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFFE07791EB8E64200D7E9C9 /* LaunchScreen.storyboard in Resources */,
-				CFFE07761EB8E64200D7E9C9 /* Assets.xcassets in Resources */,
-				CFFE07741EB8E64200D7E9C9 /* Main.storyboard in Resources */,
+				CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */,
+				CF6B1F941EB8EAA200F73CE2 /* Main.storyboard in Resources */,
+				CF6B1F921EB8EA2600F73CE2 /* CoreAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +354,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFFE07711EB8E64200D7E9C9 /* ViewController.swift in Sources */,
-				CFFE076F1EB8E64200D7E9C9 /* AppDelegate.swift in Sources */,
+				CFFE07D21EB8E79000D7E9C9 /* AppRouter.swift in Sources */,
+				CFFE07D51EB8E79000D7E9C9 /* Video.swift in Sources */,
+				CFFE07D11EB8E79000D7E9C9 /* AppDelegate.swift in Sources */,
+				CFFE07CC1EB8E79000D7E9C9 /* LookAndFeel.swift in Sources */,
+				CFFE07D01EB8E79000D7E9C9 /* MenuCollectionViewCell.swift in Sources */,
+				CFFE07D41EB8E79000D7E9C9 /* MenuItem.swift in Sources */,
+				CFFE07DA1EB8E8D700D7E9C9 /* MenuItemViewModel.swift in Sources */,
+				CFFE07DB1EB8E8D700D7E9C9 /* VideoViewModel.swift in Sources */,
+				CFFE07D71EB8E79000D7E9C9 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,20 +398,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CFFE07721EB8E64200D7E9C9 /* Main.storyboard */ = {
+		CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CFFE07731EB8E64200D7E9C9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CFFE07771EB8E64200D7E9C9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CFFE07781EB8E64200D7E9C9 /* Base */,
+				CFFE07B71EB8E79000D7E9C9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CFFE07B81EB8E79000D7E9C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFFE07B91EB8E79000D7E9C9 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -414,7 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SimplePlayer/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kemalenver.SimplePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,7 +528,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SimplePlayer/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kemalenver.SimplePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +609,7 @@
 				CFFE07951EB8E64200D7E9C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFFE07961EB8E64200D7E9C9 /* Build configuration list for PBXNativeTarget "SimplePlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +618,7 @@
 				CFFE07981EB8E64200D7E9C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFFE07991EB8E64200D7E9C9 /* Build configuration list for PBXNativeTarget "SimplePlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +627,7 @@
 				CFFE079B1EB8E64200D7E9C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
