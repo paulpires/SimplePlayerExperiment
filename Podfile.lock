@@ -1,0 +1,21 @@
+PODS:
+  - RxCocoa (3.4.1):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.4.1)
+  - Siesta (1.1.1):
+    - Siesta/Core (= 1.1.1)
+  - Siesta/Core (1.1.1)
+
+DEPENDENCIES:
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
+  - Siesta (~> 1.0)
+
+SPEC CHECKSUMS:
+  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  Siesta: 920372f09b7cfd798074d85d8f3cf8505529a56e
+
+PODFILE CHECKSUM: 2a43284715fb73f90b765f37c1e459f7a2ccea6b
+
+COCOAPODS: 1.2.0
