@@ -1,6 +1,6 @@
 //
 //  VideoViewModel.swift
-//  SkySkunk
+//  SimplePlayer
 //
 //  Created by Kemal Enver on 20/03/2017.
 //  Copyright © 2017 Kemal Enver. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class VideoViewModel {
+class VideoViewModel: ViewModel {
     
     let video: Video
     
@@ -39,4 +39,13 @@ final class VideoViewModel {
         return synopsis
     }
     
+    var posterImageName: String {
+        
+        return video.identifier
+    }
+    
+    var cellIdentifier: String {
+        
+        return identifier == "landscape_large1" ? "large_landscape_poster_cell" : "poster_portrait_cell"
+    }
 }

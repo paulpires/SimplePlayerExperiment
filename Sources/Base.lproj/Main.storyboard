@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
         <scene sceneID="cZn-Tj-Slg">
             <objects>
-                <viewController storyboardIdentifier="menu_view_controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0UJ-eh-Oan" customClass="MenuViewController" customModule="SkySkunk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menu_view_controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0UJ-eh-Oan" customClass="MenuViewController" customModule="SimplePlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VbG-Fc-2zC"/>
                         <viewControllerLayoutGuide type="bottom" id="nIk-SR-3bO"/>
@@ -24,14 +24,14 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8GR-uN-Ozh">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oxn-A8-7f7">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Oxn-A8-7f7">
                                     <size key="itemSize" width="430" height="415"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="menu_cell" id="ER3-BZ-Ubf" customClass="MenuCollectionViewCell" customModule="SkySkunk" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="menu_cell" id="ER3-BZ-Ubf" customClass="MenuCollectionViewCell" customModule="SimplePlayer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="430" height="415"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -39,20 +39,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cN8-CF-JpX">
-                                                    <rect key="frame" x="10" y="0.0" width="420" height="415"/>
+                                                    <rect key="frame" x="23" y="0.0" width="407" height="415"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOa-Hu-knC" userLabel="Selection Indiciator">
+                                                    <rect key="frame" x="10" y="4" width="3" height="407"/>
+                                                    <color key="backgroundColor" red="0.81634676395939088" green="0.0" blue="0.0076424388423241381" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="3" id="ovi-cU-tJT"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="cN8-CF-JpX" secondAttribute="trailing" id="7Yc-MQ-LQ8"/>
                                             <constraint firstItem="cN8-CF-JpX" firstAttribute="top" secondItem="ER3-BZ-Ubf" secondAttribute="top" id="DFT-9i-NRW"/>
-                                            <constraint firstItem="cN8-CF-JpX" firstAttribute="leading" secondItem="ER3-BZ-Ubf" secondAttribute="leading" constant="10" id="RNw-An-Cxg"/>
+                                            <constraint firstItem="xOa-Hu-knC" firstAttribute="leading" secondItem="ER3-BZ-Ubf" secondAttribute="leading" constant="10" id="Q20-di-MIN"/>
                                             <constraint firstAttribute="bottom" secondItem="cN8-CF-JpX" secondAttribute="bottom" id="SRc-UP-X8t"/>
+                                            <constraint firstItem="cN8-CF-JpX" firstAttribute="leading" secondItem="xOa-Hu-knC" secondAttribute="trailing" constant="10" id="apx-15-xVB"/>
+                                            <constraint firstAttribute="bottom" secondItem="xOa-Hu-knC" secondAttribute="bottom" constant="4" id="dSP-hI-Kj9"/>
+                                            <constraint firstItem="xOa-Hu-knC" firstAttribute="top" secondItem="ER3-BZ-Ubf" secondAttribute="top" constant="4" id="fzs-Pd-yNb"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="selectedIndicator" destination="xOa-Hu-knC" id="Yea-FC-yHV"/>
                                             <outlet property="titleLabel" destination="cN8-CF-JpX" id="hX9-0A-zEq"/>
                                         </connections>
                                     </collectionViewCell>
@@ -79,7 +90,7 @@
         <!--Category View Controller-->
         <scene sceneID="yUG-lL-AsK">
             <objects>
-                <viewController storyboardIdentifier="category_view_controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JEX-9P-axG" customClass="CategoryViewController" customModule="SkySkunk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="category_view_controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JEX-9P-axG" customClass="CategoryViewController" customModule="SimplePlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
@@ -91,22 +102,80 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CI7-Ti-b0N">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BNu-b8-P5i">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BNu-b8-P5i">
                                     <size key="itemSize" width="199" height="197"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="30"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="1" id="2Wp-Lp-mDY">
-                                        <rect key="frame" x="0.0" y="0.0" width="199" height="197"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="poster_portrait_cell" id="2Wp-Lp-mDY" customClass="PortraitPosterCollectionViewCell" customModule="SimplePlayer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="199" height="197"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="199" height="197"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCA-ED-T2h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="197"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tCA-ED-T2h" secondAttribute="trailing" id="Osd-kC-b89"/>
+                                            <constraint firstItem="tCA-ED-T2h" firstAttribute="leading" secondItem="2Wp-Lp-mDY" secondAttribute="leading" id="RIH-Zz-2zx"/>
+                                            <constraint firstAttribute="bottom" secondItem="tCA-ED-T2h" secondAttribute="bottom" id="aEd-Vw-HPU"/>
+                                            <constraint firstItem="tCA-ED-T2h" firstAttribute="top" secondItem="2Wp-Lp-mDY" secondAttribute="top" id="xGh-RG-P8J"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="posterImageView" destination="tCA-ED-T2h" id="bx5-kr-U7w"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="large_landscape_poster_cell" id="SH5-y2-p4r" customClass="LargeLandscapePosterCollectionViewCell" customModule="SimplePlayer" customModuleProvider="target">
+                                        <rect key="frame" x="199" y="30" width="609" height="393"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="609" height="393"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="268-Rq-cIy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="609" height="393"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="268-Rq-cIy" firstAttribute="leading" secondItem="SH5-y2-p4r" secondAttribute="leading" id="JHa-uG-1uF"/>
+                                            <constraint firstAttribute="trailing" secondItem="268-Rq-cIy" secondAttribute="trailing" id="YEM-iL-EM5"/>
+                                            <constraint firstItem="268-Rq-cIy" firstAttribute="top" secondItem="SH5-y2-p4r" secondAttribute="top" id="bqi-Ra-fJf"/>
+                                            <constraint firstAttribute="bottom" secondItem="268-Rq-cIy" secondAttribute="bottom" id="k5g-Te-lHK"/>
+                                        </constraints>
+                                        <size key="customSize" width="609" height="393"/>
+                                        <connections>
+                                            <outlet property="posterImageView" destination="268-Rq-cIy" id="yBn-5x-Ajd"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category_section_header" id="NHw-k1-Qy4" customClass="CategorySectionHeaderSupplementaryView" customModule="SimplePlayer" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Header 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ2-6y-m5C" userLabel="Category Title Label">
+                                            <rect key="frame" x="0.0" y="0.0" width="1019" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="VZ2-6y-m5C" firstAttribute="top" secondItem="NHw-k1-Qy4" secondAttribute="top" id="FDE-JL-PxH"/>
+                                        <constraint firstAttribute="bottom" secondItem="VZ2-6y-m5C" secondAttribute="bottom" id="Ta4-y3-tjJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="VZ2-6y-m5C" secondAttribute="trailing" constant="5" id="hLZ-TU-yXh"/>
+                                        <constraint firstItem="VZ2-6y-m5C" firstAttribute="leading" secondItem="NHw-k1-Qy4" secondAttribute="leading" id="uzt-4l-8Z7"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="categoryTitleLabel" destination="VZ2-6y-m5C" id="3G6-yD-HIA"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

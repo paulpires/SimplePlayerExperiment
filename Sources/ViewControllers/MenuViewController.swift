@@ -1,6 +1,6 @@
 //
 //  MasterViewController.swift
-//  SkySkunk
+//  SimplePlayer
 //
 //  Created by Kemal Enver on 20/03/2017.
 //  Copyright © 2017 Kemal Enver. All rights reserved.
@@ -8,55 +8,74 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+protocol MenuViewControllerDelegate {
+    
+    func menuViewController(_ menuViewController: MenuViewController, didSelect menuItem: MenuItem)
+}
 
+class MenuViewController: UIViewController {
+    
     @IBOutlet var collectionView: UICollectionView! {
         didSet {
+
             collectionView.delegate = self
             collectionView.dataSource = self
         }
     }
     
-    var tempModel:[String] = {
+    var delegate: MenuViewControllerDelegate?
     
-        var x = [String]()
-        for i in 0...100 {
-           x.append("Menu Item \(i)")
-        }
-        
-        return x
-    }()
+    var menuViewModels = DevUtiltiies.generateMenuViewModels()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        self.title = "Menu VC"
+        self.title = "Menu"
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        
     }
 }
 
-// MARK: - UICollectionViewDelegate
-extension MenuViewController: UICollectionViewDelegate {
+extension MenuViewController {
     
-
+    static func makeMenuViewController(from storyboard: UIStoryboard, delegate: MenuViewControllerDelegate?) -> MenuViewController {
+        
+        let menuViewController = storyboard.instantiateViewController(withIdentifier: "menu_view_controller") as! MenuViewController
+        menuViewController.delegate = delegate
+        
+        return menuViewController
+    }
 }
 
 // MARK: - UICollectionViewDataSource
 extension MenuViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tempModel.count
+        return menuViewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menu_cell", for: indexPath) as? MenuCollectionViewCell else {
-            return UICollectionViewCell()
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menu_cell", for: indexPath)
         
-        cell.titleLabel.text = tempModel[indexPath.row]
+        let menuCell = cell as! MenuCollectionViewCell
         
-        return cell
+        menuCell.viewModel = menuViewModels[indexPath.row]
+        
+        return menuCell
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension MenuViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let menuItemViewModel = self.menuViewModels[indexPath.row]
+        
+        delegate?.menuViewController(self, didSelect: menuItemViewModel.menuItem)
     }
 }
 

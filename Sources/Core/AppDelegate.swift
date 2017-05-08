@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  SkySkunk
+//  SimplePlayer
 //
 //  Created by Kemal Enver on 20/03/2017.
 //  Copyright © 2017 Kemal Enver. All rights reserved.
@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.router = AppRouter(appLaunchOptions: launchOptions)
+        self.router?.showInitial()
         
         LookAndFeel.apply()
         

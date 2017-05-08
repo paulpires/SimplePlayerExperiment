@@ -1,6 +1,6 @@
 //
 //  MenuItem.swift
-//  SkySkunk
+//  SimplePlayer
 //
 //  Created by Kemal Enver on 21/03/2017.
 //  Copyright © 2017 Kemal Enver. All rights reserved.

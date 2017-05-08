@@ -1,6 +1,6 @@
 //
 //  MenuItemViewModel.swift
-//  SkySkunk
+//  SimplePlayer
 //
 //  Created by Kemal Enver on 21/03/2017.
 //  Copyright © 2017 Kemal Enver. All rights reserved.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-final class MenuItemViewModel {
+class MenuItemViewModel: ViewModel {
     
-    private let menuItem: MenuItem
+    let menuItem: MenuItem
     
     var name: String {
         return menuItem.name.uppercased()
