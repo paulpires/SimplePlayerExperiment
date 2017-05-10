@@ -50,6 +50,15 @@ class AppRouter {
     }
 }
 
+extension AppRouter {
+    
+    func showVideoViewController(for video: Video) {
+    
+        let videoViewController = VideoViewController.makeVideoViewController(from: storyboard, video: video, delegate: self)
+        splitViewController.present(videoViewController, animated: true, completion: nil)
+    }
+}
+
 // MARK: - UISplitViewDelegate
 extension AppRouter: UISplitViewControllerDelegate {
     
@@ -68,7 +77,7 @@ extension AppRouter {
 extension AppRouter: MenuViewControllerDelegate {
     
     func menuViewController(_ menuViewController: MenuViewController, didSelect menuItem: MenuItem) {
-        print("menu controller selected \(menuItem) from \(menuViewController)")
+        
         splitViewController.showDetailViewController(detailNavigationController, sender: self)
     }
 }
@@ -76,7 +85,15 @@ extension AppRouter: MenuViewControllerDelegate {
 extension AppRouter: CategoryViewControllerDelegate {
     
     func categoryViewController(_ categoryViewController: CategoryViewController, didSelect video: Video) {
-        
-        print("category controller selected \(video) from \(categoryViewController)")
+       
+        showVideoViewController(for: video)
     }
 }
+
+extension AppRouter: VideoViewControllerDelegate {
+    
+    func videoViewControllerTappedClose(_ videoViewController: VideoViewController) {
+        
+    }
+}
+

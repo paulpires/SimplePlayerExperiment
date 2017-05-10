@@ -27,6 +27,7 @@ class CategoryViewController: UIViewController {
             collectionView.contentInset = CategoryCollectionViewMetrics.controllerInsets
         }
     }
+    
     var delegate: CategoryViewControllerDelegate?
     
     var videoViewModels = DevUtiltiies.generateVideoViewModels()

@@ -44,6 +44,11 @@ class VideoViewModel: ViewModel {
         return video.identifier
     }
     
+    var landscapeImageName: String {
+        
+        return "video_details_landscape"
+    }
+    
     var cellIdentifier: String {
         
         return identifier == "landscape_large1" ? "large_landscape_poster_cell" : "poster_portrait_cell"

@@ -11,7 +11,5 @@ import UIKit
 
 protocol ViewModelDisplayable {
     
-    //associatedtype ViewModel
-    
     var viewModel: ViewModel? { get set }
 }
