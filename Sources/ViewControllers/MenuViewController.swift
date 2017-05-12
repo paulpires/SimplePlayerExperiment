@@ -8,24 +8,19 @@
 
 import UIKit
 
-protocol MenuViewControllerDelegate {
+protocol MenuViewControllerDelegate: class {
     
     func menuViewController(_ menuViewController: MenuViewController, didSelect menuItem: MenuItem)
 }
 
 class MenuViewController: UIViewController {
     
-    @IBOutlet var collectionView: UICollectionView! {
-        didSet {
-
-            collectionView.delegate = self
-            collectionView.dataSource = self
-        }
-    }
+    @IBOutlet var collectionView: UICollectionView!
     
-    var delegate: MenuViewControllerDelegate?
+    weak var menuViewControllerDelegate: MenuViewControllerDelegate?
     
-    var menuViewModels = DevUtiltiies.generateMenuViewModels()
+    fileprivate var collectionViewDataSource: MenuCollectionViewDataSource?
+    fileprivate var collectionViewDelegate: MenuCollectionViewDelegate?
     
     override func viewDidLoad() {
         
@@ -33,8 +28,20 @@ class MenuViewController: UIViewController {
         
         self.title = "Menu"
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        setupCollectionView()
         
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+    }
+    
+    private func setupCollectionView() {
+        
+        let menuViewModels = DevUtiltiies.generateMenuViewModels()
+        
+        collectionViewDataSource =  MenuCollectionViewDataSource(menuItemViewModels: menuViewModels)
+        collectionViewDelegate = MenuCollectionViewDelegate(menuItemViewModels: menuViewModels, menuViewController: self)
+        
+        collectionView.dataSource = collectionViewDataSource
+        collectionView.delegate = collectionViewDelegate
     }
 }
 
@@ -43,48 +50,8 @@ extension MenuViewController {
     static func makeMenuViewController(from storyboard: UIStoryboard, delegate: MenuViewControllerDelegate?) -> MenuViewController {
         
         let menuViewController = storyboard.instantiateViewController(withIdentifier: "menu_view_controller") as! MenuViewController
-        menuViewController.delegate = delegate
+        menuViewController.menuViewControllerDelegate = delegate
         
         return menuViewController
     }
 }
-
-// MARK: - UICollectionViewDataSource
-extension MenuViewController: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return menuViewModels.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menu_cell", for: indexPath)
-        
-        let menuCell = cell as! MenuCollectionViewCell
-        
-        menuCell.viewModel = menuViewModels[indexPath.row]
-        
-        return menuCell
-    }
-}
-
-// MARK: - UICollectionViewDelegate
-extension MenuViewController: UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let menuItemViewModel = self.menuViewModels[indexPath.row]
-        
-        delegate?.menuViewController(self, didSelect: menuItemViewModel.menuItem)
-    }
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-extension MenuViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: collectionView.bounds.width, height: 50)
-    }
-}
-

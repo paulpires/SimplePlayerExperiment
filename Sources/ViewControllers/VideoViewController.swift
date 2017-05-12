@@ -11,12 +11,28 @@ import UIKit
 
 protocol VideoViewControllerDelegate: class {
     
-    
 }
 
 class VideoViewController: UIViewController {
     
     @IBOutlet var programmeImageView: UIImageView!
+    
+    @IBOutlet var ageRatingLabel: UILabel! {
+        didSet {
+            ageRatingLabel.textColor = .white
+        }
+    }
+    @IBOutlet var runningTimeLabel: UILabel! {
+        didSet {
+            runningTimeLabel.textColor = .white
+        }
+    }
+    @IBOutlet var yearLabel: UILabel! {
+        didSet {
+            yearLabel.textColor = .white
+        }
+    }
+    
     @IBOutlet var closeButton: UIButton! {
         didSet {
             closeButton.addTarget(self, action: #selector(tappedClose), for: .touchUpInside)
@@ -47,6 +63,8 @@ class VideoViewController: UIViewController {
          super.viewDidLoad()
         
         self.programmeImageView.image = UIImage(named: videoViewModel.landscapeImageName)
+        
+        self.view.backgroundColor = VideoViewControllerDesign.Colors.backgroundColor
     }
     
     func tappedClose() {
@@ -56,6 +74,7 @@ class VideoViewController: UIViewController {
 }
 
 extension VideoViewController {
+    
     
     static func makeVideoViewController(from storyboard: UIStoryboard, video: Video, delegate: VideoViewControllerDelegate?) -> VideoViewController {
         

@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		28C7297A55F87ABF4EE230E3 /* Pods_SimplePlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34745CF96F4A5D049E490B69 /* Pods_SimplePlayerUITests.framework */; };
 		8D29DF84F79A0BC24C09033D /* Pods_SimplePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39A929F5483CE4E1D5A0473 /* Pods_SimplePlayer.framework */; };
+		CF33AA7A1EC46D8E004FEA7C /* VideoViewControllerDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF33AA791EC46D8E004FEA7C /* VideoViewControllerDesign.swift */; };
 		CF5C6D591EB9CD8500F1BB5C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07C71EB8E79000D7E9C9 /* CategoryViewController.swift */; };
 		CF5C6D5B1EB9CE1400F1BB5C /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5C6D5A1EB9CE1400F1BB5C /* TestAssets.xcassets */; };
 		CF5C6D5D1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C6D5C1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift */; };
 		CF6B1F921EB8EA2600F73CE2 /* CoreAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */; };
 		CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */; };
 		CF6B1F941EB8EAA200F73CE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07B81EB8E79000D7E9C9 /* Main.storyboard */; };
+		CF8F69621EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69611EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift */; };
+		CF8F69651EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69641EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift */; };
+		CF8F69671EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69661EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift */; };
+		CF8F69691EC5F5E100FFADD8 /* MenuCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69681EC5F5E100FFADD8 /* MenuCollectionViewDelegate.swift */; };
 		CF972A681EC3565B00C26EE3 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF972A671EC3565B00C26EE3 /* VideoViewController.swift */; };
 		CFBE43001EBB628F00C19AC6 /* LargeLandscapePosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE42FF1EBB628F00C19AC6 /* LargeLandscapePosterCollectionViewCell.swift */; };
 		CFBE43091EBB884E00C19AC6 /* ViewModelDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE43081EBB884E00C19AC6 /* ViewModelDisplayable.swift */; };
@@ -64,9 +69,14 @@
 		9028882A423111731DBB6D7E /* Pods-SimplePlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimplePlayer/Pods-SimplePlayer.release.xcconfig"; sourceTree = "<group>"; };
 		C3822A646A6149FC9B08E461 /* Pods-SimplePlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimplePlayerTests/Pods-SimplePlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C39A929F5483CE4E1D5A0473 /* Pods_SimplePlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplePlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF33AA791EC46D8E004FEA7C /* VideoViewControllerDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewControllerDesign.swift; sourceTree = "<group>"; };
 		CF5C6D5A1EB9CE1400F1BB5C /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
 		CF5C6D5C1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortraitPosterCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CoreAssets.xcassets; sourceTree = "<group>"; };
+		CF8F69611EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		CF8F69641EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		CF8F69661EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		CF8F69681EC5F5E100FFADD8 /* MenuCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		CF972A671EC3565B00C26EE3 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		CFBE42FF1EBB628F00C19AC6 /* LargeLandscapePosterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeLandscapePosterCollectionViewCell.swift; sourceTree = "<group>"; };
 		CFBE43081EBB884E00C19AC6 /* ViewModelDisplayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelDisplayable.swift; sourceTree = "<group>"; };
@@ -137,6 +147,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF8F69601EC5EA2400FFADD8 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				CF8F69611EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift */,
+				CF8F69641EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift */,
+				CF8F69661EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift */,
+				CF8F69681EC5F5E100FFADD8 /* MenuCollectionViewDelegate.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
 		CFD5AD1B1EBB400300FAC6DE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +209,7 @@
 		CFFE07B21EB8E79000D7E9C9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CF8F69601EC5EA2400FFADD8 /* DataSources */,
 				CFD5AD1B1EBB400300FAC6DE /* Utilities */,
 				CFFE07B31EB8E79000D7E9C9 /* Appearance */,
 				CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */,
@@ -210,6 +232,7 @@
 			children = (
 				CFFE07B41EB8E79000D7E9C9 /* LookAndFeel.swift */,
 				CFBE430C1EBB889300C19AC6 /* CategoryCollectionViewMetrics.swift */,
+				CF33AA791EC46D8E004FEA7C /* VideoViewControllerDesign.swift */,
 			);
 			path = Appearance;
 			sourceTree = "<group>";
@@ -272,9 +295,9 @@
 		CFFE07C61EB8E79000D7E9C9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CFBE430E1EBB8AE000C19AC6 /* SplitViewController.swift */,
 				CFFE07C71EB8E79000D7E9C9 /* CategoryViewController.swift */,
 				CFFE07C81EB8E79000D7E9C9 /* MenuViewController.swift */,
-				CFBE430E1EBB8AE000C19AC6 /* SplitViewController.swift */,
 				CF972A671EC3565B00C26EE3 /* VideoViewController.swift */,
 			);
 			path = ViewControllers;
@@ -589,6 +612,9 @@
 				CF5C6D591EB9CD8500F1BB5C /* CategoryViewController.swift in Sources */,
 				CFFE07D21EB8E79000D7E9C9 /* AppRouter.swift in Sources */,
 				CFFE07D51EB8E79000D7E9C9 /* Video.swift in Sources */,
+				CF8F69671EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift in Sources */,
+				CF8F69691EC5F5E100FFADD8 /* MenuCollectionViewDelegate.swift in Sources */,
+				CF8F69651EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift in Sources */,
 				CFFE07D11EB8E79000D7E9C9 /* AppDelegate.swift in Sources */,
 				CFBE430D1EBB889300C19AC6 /* CategoryCollectionViewMetrics.swift in Sources */,
 				CFBE430F1EBB8AE000C19AC6 /* SplitViewController.swift in Sources */,
@@ -604,7 +630,9 @@
 				CFFE07DB1EB8E8D700D7E9C9 /* VideoViewModel.swift in Sources */,
 				CFD5AD1D1EBB400300FAC6DE /* DevUtilities.swift in Sources */,
 				CFFE07D71EB8E79000D7E9C9 /* MenuViewController.swift in Sources */,
+				CF8F69621EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift in Sources */,
 				CFD5AD1A1EBB3C0B00FAC6DE /* CategorySectionHeaderSupplementaryView.swift in Sources */,
+				CF33AA7A1EC46D8E004FEA7C /* VideoViewControllerDesign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

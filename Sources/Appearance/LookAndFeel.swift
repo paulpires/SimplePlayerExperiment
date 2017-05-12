@@ -36,8 +36,6 @@ struct LookAndFeel {
     
     private static func applyCategoryControllerAppearance() {
         
-        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "imageName")
-//        [UINavigationBar appearance].backIndicatorImage = customBackButton;
-//        [UINavigationBar appearance].backIndicatorTransitionMaskImage = customBackButton;
+
     }
 }
