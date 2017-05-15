@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category_section_header" id="9uZ-io-sCK" customClass="CategorySectionHeaderSupplementaryView" customModule="SimplePlayer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Header 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsj-WV-jTE" userLabel="Category Title Label">
+                    <rect key="frame" x="0.0" y="7" width="422" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="3Ot-tE-zql"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vsj-WV-jTE" secondAttribute="trailing" constant="5" id="mgL-s4-Fof"/>
+                <constraint firstAttribute="bottom" secondItem="vsj-WV-jTE" secondAttribute="bottom" constant="5" id="prg-Ew-DE7"/>
+                <constraint firstItem="vsj-WV-jTE" firstAttribute="leading" secondItem="9uZ-io-sCK" secondAttribute="leading" id="zJT-V8-eMS"/>
+            </constraints>
+            <connections>
+                <outlet property="categoryTitleLabel" destination="vsj-WV-jTE" id="caF-wi-69G"/>
+            </connections>
+            <point key="canvasLocation" x="-64" y="-325"/>
+        </collectionReusableView>
+    </objects>
+</document>

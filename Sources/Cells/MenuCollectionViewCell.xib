@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="menu_cell" id="lAt-cQ-FjG" customClass="MenuCollectionViewCell" customModule="SimplePlayer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="517" height="173"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="517" height="173"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSx-yu-pfo">
+                        <rect key="frame" x="23" y="0.0" width="494" height="173"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fu5-IG-ZeJ" userLabel="Selection Indiciator">
+                        <rect key="frame" x="10" y="4" width="3" height="165"/>
+                        <color key="backgroundColor" red="0.81634676399999995" green="0.0" blue="0.0076424388419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="GQ5-g6-VSw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Fu5-IG-ZeJ" firstAttribute="top" secondItem="lAt-cQ-FjG" secondAttribute="top" constant="4" id="Vv3-u2-Ka0"/>
+                <constraint firstAttribute="bottom" secondItem="XSx-yu-pfo" secondAttribute="bottom" id="aKp-US-AT1"/>
+                <constraint firstItem="XSx-yu-pfo" firstAttribute="top" secondItem="lAt-cQ-FjG" secondAttribute="top" id="atz-zl-5QM"/>
+                <constraint firstItem="XSx-yu-pfo" firstAttribute="leading" secondItem="Fu5-IG-ZeJ" secondAttribute="trailing" constant="10" id="s1I-dP-o3t"/>
+                <constraint firstAttribute="bottom" secondItem="Fu5-IG-ZeJ" secondAttribute="bottom" constant="4" id="wgA-yS-hTb"/>
+                <constraint firstAttribute="trailing" secondItem="XSx-yu-pfo" secondAttribute="trailing" id="xLy-gA-as7"/>
+                <constraint firstItem="Fu5-IG-ZeJ" firstAttribute="leading" secondItem="lAt-cQ-FjG" secondAttribute="leading" constant="10" id="xVQ-IC-TSb"/>
+            </constraints>
+            <size key="customSize" width="517" height="173"/>
+            <connections>
+                <outlet property="selectedIndicator" destination="Fu5-IG-ZeJ" id="2Y8-LG-xeZ"/>
+                <outlet property="titleLabel" destination="XSx-yu-pfo" id="zDa-2n-H0B"/>
+            </connections>
+            <point key="canvasLocation" x="-58" y="-209"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -36,14 +36,19 @@ extension CategoryViewController {
         
         super.viewDidLoad()
         
-        title = "Videos"
+        setupCollectionViewDelegates()
+        registerCollectionViewCells()
         
-        setupCollectionView()
+        setupControllerDetails()
+    }
+    
+    private func setupControllerDetails() {
         
+        self.title = "Videos"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     }
     
-    private func setupCollectionView() {
+    private func setupCollectionViewDelegates() {
         
         let videoViewModels = DevUtiltiies.generateVideoViewModels()
         
@@ -52,6 +57,18 @@ extension CategoryViewController {
         
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
+    }
+    
+    private func registerCollectionViewCells() {
+       
+        let portraitPosterNib = UINib(nibName: "PortraitPosterCollectionViewCell", bundle: nil)
+        collectionView.register(portraitPosterNib, forCellWithReuseIdentifier: "poster_portrait_cell")
+        
+        let landscapePosterNib = UINib(nibName: "LargeLandscapePosterCollectionViewCell", bundle: nil)
+        collectionView.register(landscapePosterNib, forCellWithReuseIdentifier: "large_landscape_poster_cell")
+        
+        let headerSupplementaryNib = UINib(nibName: "CategorySectionHeaderSupplementaryView", bundle: nil)
+        collectionView.register(headerSupplementaryNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "category_section_header")
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {

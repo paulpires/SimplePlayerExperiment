@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="poster_portrait_cell" id="ZU3-uP-Veg" customClass="PortraitPosterCollectionViewCell" customModule="SimplePlayer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="255" height="452"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="255" height="452"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJa-9F-icM">
+                        <rect key="frame" x="0.0" y="0.0" width="255" height="452"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bJa-9F-icM" secondAttribute="trailing" id="Zdb-58-qou"/>
+                <constraint firstItem="bJa-9F-icM" firstAttribute="leading" secondItem="ZU3-uP-Veg" secondAttribute="leading" id="jDl-mB-YfH"/>
+                <constraint firstItem="bJa-9F-icM" firstAttribute="top" secondItem="ZU3-uP-Veg" secondAttribute="top" id="mJK-Dg-WEB"/>
+                <constraint firstAttribute="bottom" secondItem="bJa-9F-icM" secondAttribute="bottom" id="nVN-uP-zmQ"/>
+            </constraints>
+            <size key="customSize" width="255" height="452"/>
+            <connections>
+                <outlet property="posterImageView" destination="bJa-9F-icM" id="jqP-es-kvd"/>
+            </connections>
+            <point key="canvasLocation" x="52.5" y="-75"/>
+        </collectionViewCell>
+    </objects>
+</document>

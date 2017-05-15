@@ -39,7 +39,7 @@ class VideoViewController: UIViewController {
         }
     }
     
-    private weak var delegate: VideoViewControllerDelegate?
+    weak var videoViewControllerDelegate: VideoViewControllerDelegate?
     
     public var video: Video? {
         
@@ -68,18 +68,18 @@ class VideoViewController: UIViewController {
     }
     
     func tappedClose() {
+        
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
 extension VideoViewController {
-    
     
     static func makeVideoViewController(from storyboard: UIStoryboard, video: Video, delegate: VideoViewControllerDelegate?) -> VideoViewController {
         
         let videoViewController = storyboard.instantiateViewController(withIdentifier: "video_view_controller") as! VideoViewController
         videoViewController.video = video
+        videoViewController.videoViewControllerDelegate = delegate
         
         return videoViewController
     }

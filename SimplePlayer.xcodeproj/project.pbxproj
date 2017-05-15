@@ -29,6 +29,10 @@
 		CFBE43151EBCB87D00C19AC6 /* IconAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFBE43141EBCB87D00C19AC6 /* IconAssets.xcassets */; };
 		CFD5AD1A1EBB3C0B00FAC6DE /* CategorySectionHeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD5AD191EBB3C0B00FAC6DE /* CategorySectionHeaderSupplementaryView.swift */; };
 		CFD5AD1D1EBB400300FAC6DE /* DevUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD5AD1C1EBB400300FAC6DE /* DevUtilities.swift */; };
+		CFEBC6EF1EC9B97000E50B7E /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFEBC6EE1EC9B97000E50B7E /* MenuCollectionViewCell.xib */; };
+		CFEBC6F11EC9BA1F00E50B7E /* PortraitPosterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFEBC6F01EC9BA1F00E50B7E /* PortraitPosterCollectionViewCell.xib */; };
+		CFEBC6F31EC9BAB000E50B7E /* LargeLandscapePosterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFEBC6F21EC9BAB000E50B7E /* LargeLandscapePosterCollectionViewCell.xib */; };
+		CFEBC6F51EC9BB4B00E50B7E /* CategorySectionHeaderSupplementaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFEBC6F41EC9BB4B00E50B7E /* CategorySectionHeaderSupplementaryView.xib */; };
 		CFFE07841EB8E64200D7E9C9 /* SimplePlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07831EB8E64200D7E9C9 /* SimplePlayerTests.swift */; };
 		CFFE078F1EB8E64200D7E9C9 /* SimplePlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE078E1EB8E64200D7E9C9 /* SimplePlayerUITests.swift */; };
 		CFFE07CC1EB8E79000D7E9C9 /* LookAndFeel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07B41EB8E79000D7E9C9 /* LookAndFeel.swift */; };
@@ -86,6 +90,10 @@
 		CFBE43141EBCB87D00C19AC6 /* IconAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = IconAssets.xcassets; sourceTree = "<group>"; };
 		CFD5AD191EBB3C0B00FAC6DE /* CategorySectionHeaderSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionHeaderSupplementaryView.swift; sourceTree = "<group>"; };
 		CFD5AD1C1EBB400300FAC6DE /* DevUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevUtilities.swift; sourceTree = "<group>"; };
+		CFEBC6EE1EC9B97000E50B7E /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		CFEBC6F01EC9BA1F00E50B7E /* PortraitPosterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortraitPosterCollectionViewCell.xib; sourceTree = "<group>"; };
+		CFEBC6F21EC9BAB000E50B7E /* LargeLandscapePosterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LargeLandscapePosterCollectionViewCell.xib; sourceTree = "<group>"; };
+		CFEBC6F41EC9BB4B00E50B7E /* CategorySectionHeaderSupplementaryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySectionHeaderSupplementaryView.xib; sourceTree = "<group>"; };
 		CFFE076B1EB8E64200D7E9C9 /* SimplePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFE077F1EB8E64200D7E9C9 /* SimplePlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplePlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFE07831EB8E64200D7E9C9 /* SimplePlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayerTests.swift; sourceTree = "<group>"; };
@@ -241,9 +249,13 @@
 			isa = PBXGroup;
 			children = (
 				CFFE07BB1EB8E79000D7E9C9 /* MenuCollectionViewCell.swift */,
+				CFEBC6EE1EC9B97000E50B7E /* MenuCollectionViewCell.xib */,
 				CF5C6D5C1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift */,
+				CFEBC6F01EC9BA1F00E50B7E /* PortraitPosterCollectionViewCell.xib */,
 				CFBE42FF1EBB628F00C19AC6 /* LargeLandscapePosterCollectionViewCell.swift */,
+				CFEBC6F21EC9BAB000E50B7E /* LargeLandscapePosterCollectionViewCell.xib */,
 				CFD5AD191EBB3C0B00FAC6DE /* CategorySectionHeaderSupplementaryView.swift */,
+				CFEBC6F41EC9BB4B00E50B7E /* CategorySectionHeaderSupplementaryView.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -443,8 +455,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */,
+				CFEBC6EF1EC9B97000E50B7E /* MenuCollectionViewCell.xib in Resources */,
 				CF6B1F941EB8EAA200F73CE2 /* Main.storyboard in Resources */,
+				CFEBC6F51EC9BB4B00E50B7E /* CategorySectionHeaderSupplementaryView.xib in Resources */,
+				CFEBC6F11EC9BA1F00E50B7E /* PortraitPosterCollectionViewCell.xib in Resources */,
 				CFBE43151EBCB87D00C19AC6 /* IconAssets.xcassets in Resources */,
+				CFEBC6F31EC9BAB000E50B7E /* LargeLandscapePosterCollectionViewCell.xib in Resources */,
 				CF5C6D5B1EB9CE1400F1BB5C /* TestAssets.xcassets in Resources */,
 				CF6B1F921EB8EA2600F73CE2 /* CoreAssets.xcassets in Resources */,
 			);

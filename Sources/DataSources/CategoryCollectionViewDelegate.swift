@@ -70,4 +70,14 @@ extension CategoryCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
             return CGSize(width: width, height: height)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        return CGSize(width: collectionView.bounds.width, height: 30)
+    }
 }
+    
+    
+    
+
+    

@@ -26,14 +26,19 @@ class MenuViewController: UIViewController {
         
         super.viewDidLoad()
         
+        setupCollectionViewDelegates()
+        registerCollectionViewCells()
+        
+        setupControllerDetails()
+    }
+    
+    private func setupControllerDetails() {
+        
         self.title = "Menu"
-        
-        setupCollectionView()
-        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     }
     
-    private func setupCollectionView() {
+    private func setupCollectionViewDelegates() {
         
         let menuViewModels = DevUtiltiies.generateMenuViewModels()
         
@@ -42,6 +47,11 @@ class MenuViewController: UIViewController {
         
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
+    }
+    
+    func registerCollectionViewCells() {
+        let nib = UINib(nibName: "MenuCollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "menu_cell")
     }
 }
 

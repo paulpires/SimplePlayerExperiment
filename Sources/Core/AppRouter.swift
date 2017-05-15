@@ -26,7 +26,14 @@ class AppRouter {
         self.appLaunchOptions = appLaunchOptions
     }
     
-    func showInitial() {
+    public func showInitial() {
+        
+        createViewControllers()
+        configureViewControllers()
+        configureWindowRootController()
+    }
+    
+    private func createViewControllers() {
         
         menuViewController = MenuViewController.makeMenuViewController(from: storyboard, delegate: self)
         categoryViewController = CategoryViewController.makeCategoryViewController(from: storyboard, delegate: self)
@@ -35,48 +42,40 @@ class AppRouter {
         
         masterNavigationController = UINavigationController(rootViewController: menuViewController)
         detailNavigationController = UINavigationController(rootViewController: categoryViewController)
+    }
+    
+    private func configureViewControllers() {
         
         detailNavigationController.navigationBar.barStyle = .black
         masterNavigationController.navigationBar.barStyle = .black
         
         splitViewController.viewControllers = [masterNavigationController, detailNavigationController]
-        splitViewController.delegate = self
         
         splitViewController.minimumPrimaryColumnWidth = 250
         splitViewController.maximumPrimaryColumnWidth = 250
+    }
+    
+    private func configureWindowRootController() {
         
         window.rootViewController = splitViewController
         window.makeKeyAndVisible()
     }
 }
 
+// MARK: - View controller presenting
 extension AppRouter {
     
-    func showVideoViewController(for video: Video) {
+    public func showVideoViewController(for video: Video) {
     
         let videoViewController = VideoViewController.makeVideoViewController(from: storyboard, video: video, delegate: self)
         splitViewController.present(videoViewController, animated: true, completion: nil)
     }
 }
 
-// MARK: - UISplitViewDelegate
-extension AppRouter: UISplitViewControllerDelegate {
-    
-    func splitViewController(_ svc: UISplitViewController, willChangeTo displayMode: UISplitViewControllerDisplayMode) {
-        
-        
-    }
-}
-
-// MARK: - View controller displaying
-extension AppRouter {
-    
-    
-}
-
+// MARK: - View Controller Delegate Handling
 extension AppRouter: MenuViewControllerDelegate {
     
-    func menuViewController(_ menuViewController: MenuViewController, didSelect menuItem: MenuItem) {
+    public func menuViewController(_ menuViewController: MenuViewController, didSelect menuItem: MenuItem) {
         
         splitViewController.showDetailViewController(detailNavigationController, sender: self)
     }
@@ -84,7 +83,7 @@ extension AppRouter: MenuViewControllerDelegate {
 
 extension AppRouter: CategoryViewControllerDelegate {
     
-    func categoryViewController(_ categoryViewController: CategoryViewController, didSelect video: Video) {
+    public func categoryViewController(_ categoryViewController: CategoryViewController, didSelect video: Video) {
        
         showVideoViewController(for: video)
     }
@@ -92,7 +91,7 @@ extension AppRouter: CategoryViewControllerDelegate {
 
 extension AppRouter: VideoViewControllerDelegate {
     
-    func videoViewControllerTappedClose(_ videoViewController: VideoViewController) {
+    public func videoViewControllerTappedClose(_ videoViewController: VideoViewController) {
         
     }
 }

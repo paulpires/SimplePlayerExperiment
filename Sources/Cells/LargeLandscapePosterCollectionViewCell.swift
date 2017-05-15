@@ -13,6 +13,7 @@ class LargeLandscapePosterCollectionViewCell: UICollectionViewCell, ViewModelDis
     
     
     @IBOutlet var posterImageView: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
     
     var viewModel: ViewModel? {
         didSet {
@@ -31,6 +32,7 @@ class LargeLandscapePosterCollectionViewCell: UICollectionViewCell, ViewModelDis
     private func updateUI() {
         
         posterImageView.image = UIImage(named: videoViewModel!.posterImageName)
+        titleLabel.text = videoViewModel?.title
     }
 }
 

@@ -22,7 +22,7 @@ class DevUtiltiies {
 
         var videoViewModels = [VideoViewModel]()
         
-        let video = Video(identifier: "landscape_large1", title: "", synopsis: "")
+        let video = Video(identifier: "landscape_large1", title: "some title 1", synopsis: "Some synopsis 1")
         let videoViewModel = VideoViewModel(video: video)
         videoViewModels.append(videoViewModel)
         
@@ -30,7 +30,7 @@ class DevUtiltiies {
             
             let capped = DevUtiltiies.capNumber(val: i, min: 1, max: 16)
             
-            let video = Video(identifier: "cover\(capped)", title: "", synopsis: "")
+            let video = Video(identifier: "cover\(capped)", title: "some title \(i)", synopsis: "Some synopsis \(i)")
             let videoViewModel = VideoViewModel(video: video)
             videoViewModels.append(videoViewModel)
         }
