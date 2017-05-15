@@ -21,13 +21,14 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pLZ-1C-D8v">
                         <rect key="frame" x="0.0" y="0.0" width="609" height="393"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUe-c4-OTk">
-                        <rect key="frame" x="5" y="328" width="599" height="60"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient_mask" translatesAutoresizingMaskIntoConstraints="NO" id="pG6-9P-y72">
+                        <rect key="frame" x="0.0" y="0.0" width="609" height="393"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUe-c4-OTk">
+                        <rect key="frame" x="5" y="359" width="599" height="29"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="x5v-Jt-3uR"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="x5v-Jt-3uR"/>
                         </constraints>
-                        <string key="text">Label
-123</string>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                         <color key="textColor" red="0.89930996192893398" green="0.89930996192893398" blue="0.89930996192893398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -40,8 +41,12 @@
                 <constraint firstItem="pLZ-1C-D8v" firstAttribute="top" secondItem="8LV-B8-goI" secondAttribute="top" id="Eeo-rF-h7A"/>
                 <constraint firstItem="pLZ-1C-D8v" firstAttribute="leading" secondItem="8LV-B8-goI" secondAttribute="leading" id="Ngx-RB-Ra5"/>
                 <constraint firstAttribute="bottom" secondItem="pLZ-1C-D8v" secondAttribute="bottom" id="elb-Mr-Gph"/>
+                <constraint firstAttribute="trailing" secondItem="pG6-9P-y72" secondAttribute="trailing" id="fAr-nk-n8m"/>
+                <constraint firstItem="pG6-9P-y72" firstAttribute="leading" secondItem="8LV-B8-goI" secondAttribute="leading" id="gHP-5g-UV2"/>
                 <constraint firstItem="tUe-c4-OTk" firstAttribute="leading" secondItem="8LV-B8-goI" secondAttribute="leading" constant="5" id="gcY-eX-Ez0"/>
                 <constraint firstAttribute="trailing" secondItem="tUe-c4-OTk" secondAttribute="trailing" constant="5" id="hml-lp-ehk"/>
+                <constraint firstItem="pG6-9P-y72" firstAttribute="top" secondItem="8LV-B8-goI" secondAttribute="top" id="v2f-uE-y10"/>
+                <constraint firstAttribute="bottom" secondItem="pG6-9P-y72" secondAttribute="bottom" id="yrm-XN-xk8"/>
             </constraints>
             <size key="customSize" width="609" height="393"/>
             <connections>
@@ -51,4 +56,7 @@
             <point key="canvasLocation" x="26.5" y="52.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="gradient_mask" width="83" height="2160"/>
+    </resources>
 </document>

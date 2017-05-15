@@ -11,9 +11,9 @@ import UIKit
 
 class CategoryCollectionViewDataSource: NSObject {
     
-    var videoViewModels: [VideoViewModel]
+    var videoViewModels: [[VideoViewModel]]
     
-    init(videoViewModels: [VideoViewModel]) {
+    init(videoViewModels: [[VideoViewModel]]) {
         
         self.videoViewModels = videoViewModels
     }
@@ -23,23 +23,24 @@ extension CategoryCollectionViewDataSource: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return 5
+        return videoViewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return videoViewModels.count
+        let section = videoViewModels[section]
+        return section.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let viewModel = videoViewModels[indexPath.row]
+        let section = videoViewModels[indexPath.section]
+        let viewModel = section[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.cellIdentifier, for: indexPath)
         
-        var cell2 = cell as! ViewModelDisplayable
-        
-        cell2.viewModel = viewModel
+        var viewModelDisplayableCell = cell as! ViewModelDisplayable
+        viewModelDisplayableCell.viewModel = viewModel
         
         return cell
     }

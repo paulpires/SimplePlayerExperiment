@@ -11,8 +11,8 @@ import UIKit
 
 class LargeLandscapePosterCollectionViewCell: UICollectionViewCell, ViewModelDisplayable {
     
-    
     @IBOutlet var posterImageView: UIImageView!
+    
     @IBOutlet var titleLabel: UILabel!
     
     var viewModel: ViewModel? {
@@ -35,5 +35,3 @@ class LargeLandscapePosterCollectionViewCell: UICollectionViewCell, ViewModelDis
         titleLabel.text = videoViewModel?.title
     }
 }
-
-

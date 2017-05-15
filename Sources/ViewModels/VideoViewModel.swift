@@ -51,6 +51,6 @@ class VideoViewModel: ViewModel {
     
     var cellIdentifier: String {
         
-        return identifier == "landscape_large1" ? "large_landscape_poster_cell" : "poster_portrait_cell"
+        return identifier.contains("landscape_large") ? "large_landscape_poster_cell" : "poster_portrait_cell"
     }
 }

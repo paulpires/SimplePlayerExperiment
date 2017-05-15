@@ -11,11 +11,11 @@ import UIKit
 
 class CategoryCollectionViewDelegate: NSObject {
     
-    var videoViewModels: [VideoViewModel]
+    var videoViewModels: [[VideoViewModel]]
     
     weak var categoryViewController: CategoryViewController?
     
-    init(videoViewModels: [VideoViewModel], categoryViewController: CategoryViewController) {
+    init(videoViewModels: [[VideoViewModel]], categoryViewController: CategoryViewController) {
         
         self.videoViewModels = videoViewModels
         self.categoryViewController = categoryViewController
@@ -26,7 +26,8 @@ extension CategoryCollectionViewDelegate: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let viewModel = self.videoViewModels[indexPath.row]
+        let section = self.videoViewModels[indexPath.section]
+        let viewModel = section[indexPath.row]
         
         guard let categoryViewController = categoryViewController else { return }
         
@@ -51,7 +52,8 @@ extension CategoryCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
         let edgeSpacing = 2.0 * CategoryViewControllerDesign.Sizes.cellInterimSpacing
         let numberOfColumns = collectionView.traitCollection.horizontalSizeClass == .regular ? CategoryViewControllerDesign.Sizes.columnsRegular : CategoryViewControllerDesign.Sizes.columnsCompact
         
-        let viewModel = videoViewModels[indexPath.row]
+        let section = self.videoViewModels[indexPath.section]
+        let viewModel = section[indexPath.row]
         
         if viewModel.cellIdentifier == "large_landscape_poster_cell" {
             

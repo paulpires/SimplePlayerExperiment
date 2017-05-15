@@ -60,7 +60,7 @@ class VideoViewController: UIViewController {
     
     override func viewDidLoad() {
         
-         super.viewDidLoad()
+        super.viewDidLoad()
         
         self.programmeImageView.image = UIImage(named: videoViewModel.landscapeImageName)
         
