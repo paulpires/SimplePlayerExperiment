@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -105,78 +104,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pIX-SA-kw7">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="633"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxM-gf-9SZ">
+                                <rect key="frame" x="980" y="20" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="pIX-SA-kw7" secondAttribute="height" multiplier="1.618:1" id="AuO-wt-OyW"/>
+                                    <constraint firstAttribute="width" constant="44" id="PKE-S6-Zq7"/>
+                                    <constraint firstAttribute="height" constant="44" id="zvc-uh-GOd"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ry-y7-QHD">
-                                <rect key="frame" x="970" y="40" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="pPh-2t-2iG"/>
-                                    <constraint firstAttribute="height" constant="44" id="wjW-ng-xUX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="31"/>
-                                <state key="normal" image="close_icon"/>
+                                <state key="normal" title="Button" image="close_icon"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKC-aC-m2I">
-                                <rect key="frame" x="5" y="633" width="60" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="356-Aa-cty"/>
-                                    <constraint firstAttribute="width" constant="60" id="b10-08-PNH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pD-Bh-PPJ">
-                                <rect key="frame" x="65" y="633" width="50" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Sdh-Tz-4Oa"/>
-                                    <constraint firstAttribute="height" constant="20" id="wdb-PB-gv3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1h 45m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlH-mJ-7Gk">
-                                <rect key="frame" x="115" y="633" width="100" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="JAV-Ea-fgq"/>
-                                    <constraint firstAttribute="height" constant="20" id="kmn-7v-Hta"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pIX-SA-kw7" firstAttribute="leading" secondItem="bsh-6D-PbK" secondAttribute="leading" id="46d-y3-jcm"/>
-                            <constraint firstItem="2ry-y7-QHD" firstAttribute="top" secondItem="cvH-ZG-ntj" secondAttribute="bottom" constant="20" id="6Cf-9n-GHs"/>
-                            <constraint firstItem="pIX-SA-kw7" firstAttribute="top" secondItem="bsh-6D-PbK" secondAttribute="top" id="7vR-Fr-4J0"/>
-                            <constraint firstAttribute="trailing" secondItem="pIX-SA-kw7" secondAttribute="trailing" id="M5U-W2-57x"/>
-                            <constraint firstItem="jKC-aC-m2I" firstAttribute="top" secondItem="pIX-SA-kw7" secondAttribute="bottom" id="Xn2-v3-Yo4"/>
-                            <constraint firstItem="9pD-Bh-PPJ" firstAttribute="leading" secondItem="jKC-aC-m2I" secondAttribute="trailing" id="f2T-Y1-fFg"/>
-                            <constraint firstItem="WlH-mJ-7Gk" firstAttribute="leading" secondItem="9pD-Bh-PPJ" secondAttribute="trailing" id="jQg-NX-Pj5"/>
-                            <constraint firstItem="9pD-Bh-PPJ" firstAttribute="top" secondItem="pIX-SA-kw7" secondAttribute="bottom" id="lNr-kp-ZMt"/>
-                            <constraint firstItem="jKC-aC-m2I" firstAttribute="leading" secondItem="bsh-6D-PbK" secondAttribute="leading" constant="5" id="new-Kp-qWB"/>
-                            <constraint firstItem="2ry-y7-QHD" firstAttribute="trailing" secondItem="pIX-SA-kw7" secondAttribute="trailing" constant="-10" id="xXj-m3-5Je"/>
-                            <constraint firstItem="WlH-mJ-7Gk" firstAttribute="top" secondItem="pIX-SA-kw7" secondAttribute="bottom" id="yJq-XK-5ou"/>
+                            <constraint firstItem="CxM-gf-9SZ" firstAttribute="top" secondItem="cvH-ZG-ntj" secondAttribute="bottom" id="UTl-yN-ctA"/>
+                            <constraint firstAttribute="trailing" secondItem="CxM-gf-9SZ" secondAttribute="trailing" id="nR5-nl-m4v"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ageRatingLabel" destination="9pD-Bh-PPJ" id="85k-UI-HYd"/>
-                        <outlet property="closeButton" destination="2ry-y7-QHD" id="goQ-6o-uAo"/>
-                        <outlet property="programmeImageView" destination="pIX-SA-kw7" id="CRJ-SA-HCY"/>
-                        <outlet property="runningTimeLabel" destination="WlH-mJ-7Gk" id="Lo7-Wa-kX4"/>
-                        <outlet property="yearLabel" destination="jKC-aC-m2I" id="DTt-Be-VWQ"/>
+                        <outlet property="closeButton" destination="CxM-gf-9SZ" id="WYm-IP-FrR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogm-ML-g1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-155.2734375" y="1019.53125"/>
+        </scene>
+        <!--Series View Controller-->
+        <scene sceneID="pE3-72-8J4">
+            <objects>
+                <viewController storyboardIdentifier="series_view_controller" id="KDS-Xz-uQk" customClass="SeriesViewController" customModule="SimplePlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XBu-Fl-FEz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Omq-Rd-jSk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XXY-Ic-Vlx">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OaO-eS-56a">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ijr-fh-d9j">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Omq-Rd-jSk" firstAttribute="top" secondItem="OaO-eS-56a" secondAttribute="bottom" id="FZr-vL-9C1"/>
+                            <constraint firstAttribute="trailing" secondItem="OaO-eS-56a" secondAttribute="trailing" id="G7Y-J4-hEt"/>
+                            <constraint firstItem="OaO-eS-56a" firstAttribute="top" secondItem="XXY-Ic-Vlx" secondAttribute="top" id="USy-dk-ucG"/>
+                            <constraint firstItem="OaO-eS-56a" firstAttribute="leading" secondItem="XXY-Ic-Vlx" secondAttribute="leading" id="m4q-JF-ycA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="OaO-eS-56a" id="zR3-6m-HBd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6lF-iL-nhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396.09375" y="1746.875"/>
         </scene>
     </scenes>
     <resources>

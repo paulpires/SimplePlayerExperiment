@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="kbd-P8-zqL" customClass="EpisodeSectionHeaderSupplementaryView" customModule="SimplePlayer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape_large2" translatesAutoresizingMaskIntoConstraints="NO" id="9bM-XF-qvO">
+                    <rect key="frame" x="0.0" y="0.0" width="427" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="9bM-XF-qvO" secondAttribute="height" multiplier="16:9" id="5br-tr-tia"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdZ-IE-olF">
+                    <rect key="frame" x="0.0" y="240" width="427" height="20"/>
+                    <color key="backgroundColor" red="0.81634676399999995" green="0.0" blue="0.0076424388419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="LIt-ne-F5H"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="9bM-XF-qvO" firstAttribute="leading" secondItem="kbd-P8-zqL" secondAttribute="leading" id="PHm-GL-Nhc"/>
+                <constraint firstItem="9bM-XF-qvO" firstAttribute="top" secondItem="kbd-P8-zqL" secondAttribute="top" id="S1Y-nC-oMh"/>
+                <constraint firstAttribute="trailing" secondItem="BdZ-IE-olF" secondAttribute="trailing" id="e5B-6f-Trt"/>
+                <constraint firstItem="BdZ-IE-olF" firstAttribute="leading" secondItem="kbd-P8-zqL" secondAttribute="leading" id="fPQ-DY-DIi"/>
+                <constraint firstAttribute="trailing" secondItem="9bM-XF-qvO" secondAttribute="trailing" id="hHm-kr-P9U"/>
+                <constraint firstItem="BdZ-IE-olF" firstAttribute="top" secondItem="9bM-XF-qvO" secondAttribute="bottom" id="ix5-oB-ndq"/>
+            </constraints>
+            <connections>
+                <outlet property="programmeImageView" destination="9bM-XF-qvO" id="dMH-KQ-i0y"/>
+            </connections>
+            <point key="canvasLocation" x="-64.5" y="-210"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="landscape_large2" width="640" height="360"/>
+    </resources>
+</document>

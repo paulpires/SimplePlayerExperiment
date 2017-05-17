@@ -43,21 +43,29 @@ class DevUtiltiies {
         }
         
         return sections
+    }
+    
+    public static func generateSeriesViewModels() -> [[VideoViewModel]] {
         
-//        let video = Video(identifier: "landscape_large1", title: "some title 1", synopsis: "Some synopsis 1")
-//        let videoViewModel = VideoViewModel(video: video)
-//        videoViewModels.append(videoViewModel)
-//        
-//        for i in 1..<31 {
-//            
-//            let capped = DevUtiltiies.capNumber(val: i, min: 1, max: 16)
-//            
-//            let video = Video(identifier: "cover\(capped)", title: "some title \(i)", synopsis: "Some synopsis \(i)")
-//            let videoViewModel = VideoViewModel(video: video)
-//            videoViewModels.append(videoViewModel)
-//        }
-//        
-//        return videoViewModels
+        var sections = [[VideoViewModel]]()
+        
+        for _ in 1..<2 {
+            
+            var videoViewModels = [VideoViewModel]()
+    
+            for j in 1..<7 {
+                
+                let capped = DevUtiltiies.capNumber(val: j, min: 1, max: 16)
+                
+                let video = Video(identifier: "cover\(capped)", title: "some title \(j)", synopsis: "Some synopsis \(j)")
+                let videoViewModel = VideoViewModel(video: video)
+                videoViewModels.append(videoViewModel)
+            }
+            
+            sections.append(videoViewModels)
+        }
+        
+        return sections
     }
     
     public static func generateMenuViewModels() -> [MenuItemViewModel] {
