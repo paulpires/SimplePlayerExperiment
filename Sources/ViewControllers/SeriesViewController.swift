@@ -11,25 +11,17 @@ import UIKit
 
 class SeriesViewController: UIViewController {
     
-    @IBOutlet var collectionView: UICollectionView! {
-        
-        didSet {
-            collectionView.backgroundColor = UIColor.black
-        }
-    }
+    @IBOutlet var collectionView: UICollectionView!
     
-    
-    fileprivate var collectionViewDataSource: SeriesCollectionViewDataSource?
-    fileprivate var collectionViewDelegate: SeriesCollectionViewDelegate?
+    fileprivate var collectionViewDataSource: UICollectionViewDataSource?
+    fileprivate var collectionViewDelegate: UICollectionViewDelegate?
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        setupCollectionViewDelegates()
-        registerCollectionViewCells()
-        
         setupControllerDetails()
+        registerCollectionViewCells()
     }
     
     private func setupControllerDetails() {
@@ -37,15 +29,16 @@ class SeriesViewController: UIViewController {
         self.title = "Series"
     }
     
-    private func setupCollectionViewDelegates() {
+    public func setCollectionViewDataSource(dataSource: UICollectionViewDataSource) {
         
-        let videoViewModels = DevUtiltiies.generateSeriesViewModels()
+        self.collectionViewDataSource = dataSource
+        collectionView.dataSource = dataSource
+    }
+    
+    public func setCollectionViewDelegate(delegate: UICollectionViewDelegate) {
         
-        collectionViewDataSource = SeriesCollectionViewDataSource(videoViewModels: videoViewModels)
-        collectionViewDelegate = SeriesCollectionViewDelegate(videoViewModels: videoViewModels)
-        
-        collectionView.dataSource = collectionViewDataSource
-        collectionView.delegate = collectionViewDelegate
+        self.collectionViewDelegate = delegate
+        collectionView.delegate = delegate
     }
     
     func registerCollectionViewCells() {

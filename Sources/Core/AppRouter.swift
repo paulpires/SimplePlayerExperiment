@@ -65,10 +65,10 @@ class AppRouter {
 // MARK: - View controller presenting
 extension AppRouter {
     
-    public func showVideoViewController(for video: Video) {
+    public func showVideoOverviewViewController(for video: Video) {
     
-        let videoViewController = VideoViewController.makeVideoViewController(from: storyboard, video: video, delegate: self)
-        splitViewController.present(videoViewController, animated: true, completion: nil)
+        let videoOverviewViewController = VideoOverviewViewController.makeVideoOverviewViewController(from: storyboard)
+        splitViewController.present(videoOverviewViewController, animated: true, completion: nil)
     }
 }
 
@@ -85,14 +85,8 @@ extension AppRouter: CategoryViewControllerDelegate {
     
     public func categoryViewController(_ categoryViewController: CategoryViewController, didSelect video: Video) {
        
-        showVideoViewController(for: video)
+        showVideoOverviewViewController(for: video)
     }
 }
 
-extension AppRouter: VideoViewControllerDelegate {
-    
-    public func videoViewControllerTappedClose(_ videoViewController: VideoViewController) {
-        
-    }
-}
 

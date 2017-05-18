@@ -26,7 +26,7 @@ extension SeriesCollectionViewDelegate: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
         let width = collectionView.bounds.width
-        let height = (collectionView.bounds.width * 0.56) + 20
+        let height: CGFloat = 250
         
         return CGSize(width: width, height: height)
     }

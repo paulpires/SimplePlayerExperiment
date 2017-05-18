@@ -11,22 +11,6 @@ import UIKit
 
 class EpisodeSectionHeaderSupplementaryView: UICollectionReusableView {
     
-    @IBOutlet var programmeImageView: UIImageView!
-    
-    @IBOutlet var ageRatingLabel: UILabel! {
-        didSet {
-            ageRatingLabel.textColor = .white
-        }
-    }
-    @IBOutlet var runningTimeLabel: UILabel! {
-        didSet {
-            runningTimeLabel.textColor = .white
-        }
-    }
-    @IBOutlet var yearLabel: UILabel! {
-        didSet {
-            yearLabel.textColor = .white
-        }
-    }
+   
    
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -92,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="491.60156249999994" y="922.65625"/>
         </scene>
-        <!--Video View Controller-->
+        <!--Video Detail View Controller-->
         <scene sceneID="qwV-Xk-1hv">
             <objects>
-                <viewController storyboardIdentifier="video_view_controller" id="F3C-Kj-IHk" customClass="VideoViewController" customModule="SimplePlayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="video_view_controller" id="F3C-Kj-IHk" customClass="VideoDetailViewController" customModule="SimplePlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cvH-ZG-ntj"/>
                         <viewControllerLayoutGuide type="bottom" id="qA6-Xe-gH7"/>
@@ -112,16 +113,32 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="close_icon"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape_large1" translatesAutoresizingMaskIntoConstraints="NO" id="4tN-jU-sbM">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="576"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4tN-jU-sbM" secondAttribute="height" multiplier="16:9" id="b1K-VJ-wCi"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MV7-q1-sEb">
+                                <rect key="frame" x="0.0" y="576" width="1024" height="50"/>
+                                <color key="backgroundColor" red="0.81634676399999995" green="0.0" blue="0.0076424388419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VBb-af-etK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MV7-q1-sEb" firstAttribute="leading" secondItem="bsh-6D-PbK" secondAttribute="leading" id="Iuh-f9-1zd"/>
+                            <constraint firstAttribute="trailing" secondItem="MV7-q1-sEb" secondAttribute="trailing" id="RP4-qM-5fT"/>
                             <constraint firstItem="CxM-gf-9SZ" firstAttribute="top" secondItem="cvH-ZG-ntj" secondAttribute="bottom" id="UTl-yN-ctA"/>
+                            <constraint firstItem="4tN-jU-sbM" firstAttribute="top" secondItem="bsh-6D-PbK" secondAttribute="top" id="afg-AI-FR5"/>
+                            <constraint firstItem="4tN-jU-sbM" firstAttribute="leading" secondItem="bsh-6D-PbK" secondAttribute="leading" id="n28-DG-B1a"/>
+                            <constraint firstItem="MV7-q1-sEb" firstAttribute="top" secondItem="4tN-jU-sbM" secondAttribute="bottom" id="nJi-OJ-1sh"/>
                             <constraint firstAttribute="trailing" secondItem="CxM-gf-9SZ" secondAttribute="trailing" id="nR5-nl-m4v"/>
+                            <constraint firstAttribute="trailing" secondItem="4tN-jU-sbM" secondAttribute="trailing" id="ob0-n4-GWO"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="closeButton" destination="CxM-gf-9SZ" id="WYm-IP-FrR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogm-ML-g1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,7 +157,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OaO-eS-56a">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ijr-fh-d9j">
                                     <size key="itemSize" width="50" height="50"/>
@@ -153,9 +170,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OaO-eS-56a" firstAttribute="top" secondItem="XBu-Fl-FEz" secondAttribute="bottom" id="4re-IQ-rhT"/>
                             <constraint firstItem="Omq-Rd-jSk" firstAttribute="top" secondItem="OaO-eS-56a" secondAttribute="bottom" id="FZr-vL-9C1"/>
                             <constraint firstAttribute="trailing" secondItem="OaO-eS-56a" secondAttribute="trailing" id="G7Y-J4-hEt"/>
-                            <constraint firstItem="OaO-eS-56a" firstAttribute="top" secondItem="XXY-Ic-Vlx" secondAttribute="top" id="USy-dk-ucG"/>
                             <constraint firstItem="OaO-eS-56a" firstAttribute="leading" secondItem="XXY-Ic-Vlx" secondAttribute="leading" id="m4q-JF-ycA"/>
                         </constraints>
                     </view>
@@ -165,10 +182,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lF-iL-nhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-396.09375" y="1746.875"/>
+            <point key="canvasLocation" x="-150" y="1673"/>
+        </scene>
+        <!--Video Overview View Controller-->
+        <scene sceneID="BzC-cL-k0a">
+            <objects>
+                <viewController storyboardIdentifier="video_overview_view_controller" id="NkS-ey-c1j" customClass="VideoOverviewViewController" customModule="SimplePlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="05i-Jw-UTl"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZvV-YD-QjQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZMn-bY-acQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwr-b4-csA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-261" y="2398"/>
         </scene>
     </scenes>
     <resources>
         <image name="close_icon" width="25" height="25"/>
+        <image name="landscape_large1" width="640" height="360"/>
     </resources>
 </document>
