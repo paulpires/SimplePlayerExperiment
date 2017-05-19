@@ -50,6 +50,7 @@ class MenuViewController: UIViewController {
     }
     
     func registerCollectionViewCells() {
+        
         let nib = UINib(nibName: "MenuCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "menu_cell")
     }

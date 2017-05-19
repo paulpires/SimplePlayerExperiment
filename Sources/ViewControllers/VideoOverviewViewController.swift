@@ -11,53 +11,75 @@ import UIKit
 
 class VideoOverviewViewController: UIViewController {
     
-    // TODO: Replacet he seriesDataSource with another data source for having the section header.  That way the data source controls the look
-    // and  not the series controller, which is jsut dumb and does what the data source says.
+    @IBOutlet var closeButton: UIButton! {
+        didSet {
+            closeButton.addTarget(self, action: #selector(closePressed), for: .touchUpInside)
+        }
+    }
     
     var viewModels: [[VideoViewModel]] = DevUtiltiies.generateVideoViewModels()
     
-    var seriesViewController: SeriesViewController!
-    var detailViewController: VideoDetailViewController!
+    var seriesViewController: SeriesViewController?
+    var detailViewController: VideoDetailViewController?
     
-    var seriesDataSource: SeriesCollectionViewDataSource!
+    var seriesDataSource: SeriesCollectionViewDataSource?
+    var seriesDelegate: SeriesCollectionViewDelegate?
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        let videoViewModel = self.viewModels.first!.first!
-        
-        
-        //series
-        
-        seriesViewController = SeriesViewController.makeSeriesViewController(from: self.storyboard!)
-        detailViewController = VideoDetailViewController.makeVideoViewController(from: self.storyboard!, video: videoViewModel.video, delegate: nil)
 
-        self.addChildViewController(seriesViewController)
-        self.view.addSubview(seriesViewController.view)
-        seriesViewController.view.frame = self.view.bounds
-        seriesViewController.didMove(toParentViewController: self)
-        
-        
-        seriesViewController.setCollectionViewDelegate(delegate: SeriesCollectionViewDelegate(videoViewModels: viewModels))
-        
-        // TODO, change this to a data source that supports header, and remove header code from this one,
-        // New datasource will extend this and implement section header code
-        self.seriesDataSource = SeriesCollectionViewDataSource(videoViewModels: viewModels)
-        seriesViewController.setCollectionViewDataSource(dataSource: self.seriesDataSource)
-        
-        
-        // detail
-        detailViewController = VideoDetailViewController.makeVideoViewController(from: self.storyboard!, video: videoViewModel.video, delegate: nil)
+        createChildControllers()
 
-        //detailViewController.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 200)
+        createDataSources()
         
-        seriesDataSource.headerView = detailViewController.view
-        
-        seriesViewController.collectionView.reloadData()            
-
+        view.bringSubview(toFront: self.closeButton)
     }
- 
+    
+    func createChildControllers() {
+        
+        guard let videoViewModel = self.viewModels.first?.first else { return }
+        
+        // Create child view controllers
+        let seriesViewController = SeriesViewController.makeSeriesViewController(from: self.storyboard!)
+        let detailViewController = VideoDetailViewController.makeVideoViewController(from: self.storyboard!, video: videoViewModel.video, delegate: nil)
+        
+        self.seriesViewController = seriesViewController
+        self.detailViewController = detailViewController
+        
+        // Add child view controller to this one
+        addChildViewController(seriesViewController)
+        view.addSubview(seriesViewController.view)
+        seriesViewController.view.frame = view.bounds
+        seriesViewController.didMove(toParentViewController: self)
+    }
+    
+    func createDataSources() {
+        
+        guard let seriesViewController = seriesViewController,
+                let videoViewModel = self.viewModels.first?.first else { return }
+        
+        // Setup delegates/datasource for the child series
+        let seriesDelegate = SeriesCollectionViewDelegate(videoViewModels: viewModels)
+        seriesViewController.setCollectionViewDelegate(delegate: seriesDelegate)
+        self.seriesDelegate = seriesDelegate
+        
+        let seriesDataSource = SeriesCollectionViewDataSource(videoViewModels: viewModels)
+        seriesViewController.setCollectionViewDataSource(dataSource: seriesDataSource)
+        self.seriesDataSource = seriesDataSource
+        
+        // Get the video details child controller.
+        let detailViewController = VideoDetailViewController.makeVideoViewController(from: self.storyboard!, video: videoViewModel.video, delegate: nil)
+        seriesDataSource.headerView = detailViewController.view
+        seriesDelegate.headerView = detailViewController.view
+        
+        self.detailViewController = detailViewController
+    }
+    
+    @objc private func closePressed() {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 
