@@ -21,9 +21,8 @@ class AppRouter {
     fileprivate var categoryViewController: CategoryViewController!
     
     fileprivate var provider: Provider = {
-        return Provider()
+        return Provider(storeage: "test", networkAPI: "")
     }()
-    
     
     init(appLaunchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
         

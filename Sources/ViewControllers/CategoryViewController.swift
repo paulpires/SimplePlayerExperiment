@@ -109,6 +109,8 @@ extension CategoryViewController {
         self.collectionView.dataSource = collectionViewDataSource
         self.collectionView.delegate = collectionViewDelegate
         
+        
+        
         self.collectionView.reloadData()
     }
     
