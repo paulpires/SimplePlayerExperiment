@@ -13,8 +13,6 @@ class SeriesCollectionViewDataSource: NSObject {
     
     let videoViewModels: [[VideoViewModel]]
     
-    var headerView: UIView?
-    
     init(videoViewModels: [[VideoViewModel]]) {
         
         self.videoViewModels = videoViewModels
@@ -47,18 +45,5 @@ extension SeriesCollectionViewDataSource: UICollectionViewDataSource {
         cell.viewModel = episode
         
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        guard let headerView = self.headerView else { return UICollectionReusableView() }
-        
-        let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "series_header", for: indexPath)
-        
-        let sectionHeaderReusableView = reusableView as! EpisodeSectionHeaderSupplementaryView
-        
-        sectionHeaderReusableView.addSubview(headerView)
-        
-        return sectionHeaderReusableView
-    }
+    } 
 }

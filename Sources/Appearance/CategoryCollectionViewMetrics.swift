@@ -12,6 +12,7 @@ import UIKit
 struct CategoryViewControllerDesign {
     
     struct Sizes {
+        
         static let columnsCompact: CGFloat = 3.0
         static let columnsRegular: CGFloat = 5.0
         

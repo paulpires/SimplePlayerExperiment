@@ -41,19 +41,22 @@ extension MenuViewController {
         
         super.viewDidLoad()
         
+        setupControllerDetails()
+        
         setupCollectionViewDelegates()
         registerCollectionViewCells()
-        
-        setupControllerDetails()
     }
+}
+
+extension MenuViewController {
     
-    private func setupControllerDetails() {
+    fileprivate func setupControllerDetails() {
         
         self.title = "Menu"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     }
     
-    private func setupCollectionViewDelegates() {
+    fileprivate func setupCollectionViewDelegates() {
         
         let menuViewModels = DevUtiltiies.generateMenuViewModels()
         
@@ -64,7 +67,7 @@ extension MenuViewController {
         collectionView.delegate = collectionViewDelegate
     }
     
-    func registerCollectionViewCells() {
+    fileprivate func registerCollectionViewCells() {
         
         let nib = UINib(nibName: "MenuCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "menu_cell")

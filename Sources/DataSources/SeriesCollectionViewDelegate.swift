@@ -13,8 +13,6 @@ class SeriesCollectionViewDelegate: NSObject {
  
     let videoViewModels: [[VideoViewModel]]
     
-    var headerView: UIView?
-    
     init(videoViewModels: [[VideoViewModel]]) {
         
         self.videoViewModels = videoViewModels
@@ -25,18 +23,6 @@ class SeriesCollectionViewDelegate: NSObject {
 
 extension SeriesCollectionViewDelegate: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        
-        if headerView == nil {
-            
-            return CGSize(width: 0, height: 0)
-        }
-        
-        let width = collectionView.bounds.width
-        let height: CGFloat = 250
-        
-        return CGSize(width: width, height: height)
-    }
 }
 
 extension SeriesCollectionViewDelegate: UICollectionViewDelegateFlowLayout {

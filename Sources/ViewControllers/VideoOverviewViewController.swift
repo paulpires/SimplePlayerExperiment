@@ -12,9 +12,15 @@ import UIKit
 class VideoOverviewViewController: UIViewController {
     
     @IBOutlet var closeButton: UIButton! {
+        
         didSet {
+            
             closeButton.addTarget(self, action: #selector(closePressed), for: .touchUpInside)
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     var viewModels: [[VideoViewModel]] = DevUtiltiies.generateVideoViewModels()
@@ -22,12 +28,12 @@ class VideoOverviewViewController: UIViewController {
     var seriesViewController: SeriesViewController?
     var detailViewController: VideoDetailViewController?
     
-    var seriesDataSource: SeriesCollectionViewDataSource?
-    var seriesDelegate: SeriesCollectionViewDelegate?
+    var seriesDataSource: HeaderSeriesCollectionViewDataSource?
+    var seriesDelegate: HeaderSeriesCollectionViewDelegate?
 
     init() {
         
-        super.init(nibName:nil, bundle:nil)
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,8 +54,11 @@ extension VideoOverviewViewController {
         
         view.bringSubview(toFront: self.closeButton)
     }
+}
+
+extension VideoOverviewViewController {
     
-    func createChildControllers() {
+    fileprivate func createChildControllers() {
         
         guard let videoViewModel = self.viewModels.first?.first else { return }
         
@@ -61,26 +70,21 @@ extension VideoOverviewViewController {
         seriesViewController.view.frame = view.bounds
         seriesViewController.didMove(toParentViewController: self)
         
-        
         let detailViewController = VideoDetailViewController(video: videoViewModel.video, delegate: nil)
         self.detailViewController = detailViewController
     }
     
-    func createDataSources() {
+    fileprivate func createDataSources() {
         
         guard let seriesViewController = seriesViewController else { return }
         
-        // Setup delegates/datasource for the child series
-        let seriesDelegate = SeriesCollectionViewDelegate(videoViewModels: viewModels)
+        let seriesDelegate = HeaderSeriesCollectionViewDelegate(videoViewModels: viewModels, headerView: self.detailViewController!.view)
         seriesViewController.setCollectionViewDelegate(delegate: seriesDelegate)
         self.seriesDelegate = seriesDelegate
         
-        let seriesDataSource = SeriesCollectionViewDataSource(videoViewModels: viewModels)
+        let seriesDataSource = HeaderSeriesCollectionViewDataSource(videoViewModels: viewModels, headerView: self.detailViewController!.view)
         seriesViewController.setCollectionViewDataSource(dataSource: seriesDataSource)
         self.seriesDataSource = seriesDataSource
-        
-        seriesDataSource.headerView = self.detailViewController?.view
-        seriesDelegate.headerView = self.detailViewController?.view
     }
     
     @objc fileprivate func closePressed() {

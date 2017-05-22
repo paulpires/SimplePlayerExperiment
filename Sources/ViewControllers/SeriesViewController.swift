@@ -36,11 +36,25 @@ extension SeriesViewController {
         setupControllerDetails()
         registerCollectionViewCells()
     }
+}
+
+extension SeriesViewController {
     
-    private func setupControllerDetails() {
-        
-        self.title = "Series"
+    fileprivate func setupControllerDetails() {
+
     }
+    
+    fileprivate func registerCollectionViewCells() {
+        
+        let nib = UINib(nibName: "EpisodeCollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "episode_cell")
+        
+        let nib2 = UINib(nibName: "EpisodeSectionHeaderSupplementaryView", bundle: nil)
+        collectionView.register(nib2, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "header_supplementary_view")
+    }
+}
+
+extension SeriesViewController {
     
     public func setCollectionViewDataSource(dataSource: UICollectionViewDataSource) {
         
@@ -52,14 +66,5 @@ extension SeriesViewController {
         
         self.collectionViewDelegate = delegate
         collectionView.delegate = delegate
-    }
-    
-    func registerCollectionViewCells() {
-        
-        let nib = UINib(nibName: "EpisodeCollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "episode_cell")
-        
-        let nib2 = UINib(nibName: "EpisodeSectionHeaderSupplementaryView", bundle: nil)
-        collectionView.register(nib2, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "series_header")
     }
 }

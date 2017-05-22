@@ -54,5 +54,4 @@ extension CategoryCollectionViewDataSource: UICollectionViewDataSource {
         
         return sectionHeaderReusableView
     }
-    
 }

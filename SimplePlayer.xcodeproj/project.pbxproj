@@ -26,6 +26,8 @@
 		CF8A41011ED2F7B200ADAA9C /* VideoOverviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A41001ED2F7B200ADAA9C /* VideoOverviewViewController.xib */; };
 		CF8A41031ED2F85100ADAA9C /* SeriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A41021ED2F85100ADAA9C /* SeriesViewController.xib */; };
 		CF8A41051ED2FB3700ADAA9C /* VideoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A41041ED2FB3700ADAA9C /* VideoDetailViewController.xib */; };
+		CF8A41071ED3143D00ADAA9C /* HeaderSeriesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A41061ED3143D00ADAA9C /* HeaderSeriesCollectionViewDataSource.swift */; };
+		CF8A41091ED3197400ADAA9C /* HeaderSeriesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A41081ED3197400ADAA9C /* HeaderSeriesCollectionViewDelegate.swift */; };
 		CF8F69621EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69611EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift */; };
 		CF8F69651EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69641EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift */; };
 		CF8F69671EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69661EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift */; };
@@ -101,6 +103,8 @@
 		CF8A41001ED2F7B200ADAA9C /* VideoOverviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoOverviewViewController.xib; sourceTree = "<group>"; };
 		CF8A41021ED2F85100ADAA9C /* SeriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeriesViewController.xib; sourceTree = "<group>"; };
 		CF8A41041ED2FB3700ADAA9C /* VideoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoDetailViewController.xib; sourceTree = "<group>"; };
+		CF8A41061ED3143D00ADAA9C /* HeaderSeriesCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSeriesCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		CF8A41081ED3197400ADAA9C /* HeaderSeriesCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSeriesCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		CF8F69611EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		CF8F69641EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		CF8F69661EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				CF8F69681EC5F5E100FFADD8 /* MenuCollectionViewDelegate.swift */,
 				CF18D93F1ECC9B7F0028BE5C /* SeriesCollectionViewDataSource.swift */,
 				CF18D9411ECC9C630028BE5C /* SeriesCollectionViewDelegate.swift */,
+				CF8A41061ED3143D00ADAA9C /* HeaderSeriesCollectionViewDataSource.swift */,
+				CF8A41081ED3197400ADAA9C /* HeaderSeriesCollectionViewDelegate.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -674,6 +680,7 @@
 				CF18D9341ECB3B680028BE5C /* EpisodeCollectionViewCell.swift in Sources */,
 				CF5C6D591EB9CD8500F1BB5C /* CategoryViewController.swift in Sources */,
 				CFFE07D21EB8E79000D7E9C9 /* AppRouter.swift in Sources */,
+				CF8A41071ED3143D00ADAA9C /* HeaderSeriesCollectionViewDataSource.swift in Sources */,
 				CFFE07D51EB8E79000D7E9C9 /* Video.swift in Sources */,
 				CF18D9401ECC9B7F0028BE5C /* SeriesCollectionViewDataSource.swift in Sources */,
 				CF8F69671EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift in Sources */,
@@ -695,6 +702,7 @@
 				CFBE43091EBB884E00C19AC6 /* ViewModelDisplayable.swift in Sources */,
 				CFD2EB621ECB39AD00D3F1A7 /* SeriesViewController.swift in Sources */,
 				CFFE07DB1EB8E8D700D7E9C9 /* VideoViewModel.swift in Sources */,
+				CF8A41091ED3197400ADAA9C /* HeaderSeriesCollectionViewDelegate.swift in Sources */,
 				CFD5AD1D1EBB400300FAC6DE /* DevUtilities.swift in Sources */,
 				CFFE07D71EB8E79000D7E9C9 /* MenuViewController.swift in Sources */,
 				CF8F69621EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift in Sources */,

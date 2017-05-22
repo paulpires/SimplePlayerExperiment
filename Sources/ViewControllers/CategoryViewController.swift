@@ -48,39 +48,10 @@ extension CategoryViewController {
         
         super.viewDidLoad()
         
+        setupControllerDetails()
+        
         setupCollectionViewDelegates()
         registerCollectionViewCells()
-        
-        setupControllerDetails()
-    }
-    
-    private func setupControllerDetails() {
-        
-        self.title = "Videos"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
-    }
-    
-    private func setupCollectionViewDelegates() {
-        
-        let videoViewModels = DevUtiltiies.generateVideoViewModels()
-        
-        collectionViewDataSource =  CategoryCollectionViewDataSource(videoViewModels: videoViewModels)
-        collectionViewDelegate = CategoryCollectionViewDelegate(videoViewModels: videoViewModels, categoryViewController: self)
-        
-        collectionView.dataSource = collectionViewDataSource
-        collectionView.delegate = collectionViewDelegate
-    }
-    
-    private func registerCollectionViewCells() {
-       
-        let portraitPosterNib = UINib(nibName: "PortraitPosterCollectionViewCell", bundle: nil)
-        collectionView.register(portraitPosterNib, forCellWithReuseIdentifier: "poster_portrait_cell")
-        
-        let landscapePosterNib = UINib(nibName: "LargeLandscapePosterCollectionViewCell", bundle: nil)
-        collectionView.register(landscapePosterNib, forCellWithReuseIdentifier: "large_landscape_poster_cell")
-        
-        let headerSupplementaryNib = UINib(nibName: "CategorySectionHeaderSupplementaryView", bundle: nil)
-        collectionView.register(headerSupplementaryNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "category_section_header")
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -101,6 +72,38 @@ extension CategoryViewController {
         let regularCollection = UITraitCollection(horizontalSizeClass: isLandscape ? .regular : .compact)
         
         return UITraitCollection(traitsFrom: [originalTraitCollection, regularCollection])
+    }
+}
+
+extension CategoryViewController {
+    
+    fileprivate func setupControllerDetails() {
+        
+        self.title = "Videos"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+    }
+    
+    fileprivate func setupCollectionViewDelegates() {
+        
+        let videoViewModels = DevUtiltiies.generateVideoViewModels()
+        
+        collectionViewDataSource =  CategoryCollectionViewDataSource(videoViewModels: videoViewModels)
+        collectionViewDelegate = CategoryCollectionViewDelegate(videoViewModels: videoViewModels, categoryViewController: self)
+        
+        collectionView.dataSource = collectionViewDataSource
+        collectionView.delegate = collectionViewDelegate
+    }
+    
+    fileprivate func registerCollectionViewCells() {
+       
+        let portraitPosterNib = UINib(nibName: "PortraitPosterCollectionViewCell", bundle: nil)
+        collectionView.register(portraitPosterNib, forCellWithReuseIdentifier: "poster_portrait_cell")
+        
+        let landscapePosterNib = UINib(nibName: "LargeLandscapePosterCollectionViewCell", bundle: nil)
+        collectionView.register(landscapePosterNib, forCellWithReuseIdentifier: "large_landscape_poster_cell")
+        
+        let headerSupplementaryNib = UINib(nibName: "CategorySectionHeaderSupplementaryView", bundle: nil)
+        collectionView.register(headerSupplementaryNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "category_section_header")
     }
 }
 
