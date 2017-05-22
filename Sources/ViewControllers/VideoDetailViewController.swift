@@ -18,38 +18,33 @@ protocol VideoDetailViewControllerDelegate: class {
 class VideoDetailViewController: UIViewController {
     
     weak var videoViewControllerDelegate: VideoDetailViewControllerDelegate?
-    
-    public var video: Video? {
-        
-        didSet {
-            
-            guard let video = video else { return }
-            videoViewModel = VideoViewModel(video: video)
-        }
-    }
-    
-    private var videoViewModel: VideoViewModel!
+
+    private let videoViewModel: VideoViewModel
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    init(video: Video, delegate: VideoDetailViewControllerDelegate?) {
+        
+        self.videoViewModel = VideoViewModel(video: video)
+        self.videoViewControllerDelegate = delegate
+        
+        super.init(nibName:nil, bundle:nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension VideoDetailViewController {
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         self.view.backgroundColor = VideoViewControllerDesign.Colors.backgroundColor
-    }
-}
-
-extension VideoDetailViewController {
-    
-    static func makeVideoViewController(from storyboard: UIStoryboard, video: Video, delegate: VideoDetailViewControllerDelegate?) -> VideoDetailViewController {
-        
-        let videoViewController = storyboard.instantiateViewController(withIdentifier: "video_view_controller") as! VideoDetailViewController
-        videoViewController.video = video
-        videoViewController.videoViewControllerDelegate = delegate
-        
-        return videoViewController
     }
 }

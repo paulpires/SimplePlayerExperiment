@@ -28,6 +28,18 @@ class CategoryViewController: UIViewController {
     
     fileprivate var collectionViewDataSource: CategoryCollectionViewDataSource?
     fileprivate var collectionViewDelegate: CategoryCollectionViewDelegate?
+    
+    init(delegate: CategoryViewControllerDelegate) {
+        
+        super.init(nibName:nil, bundle:nil)
+        
+        self.categoryViewControllerDelegate = delegate
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension CategoryViewController {
@@ -92,13 +104,3 @@ extension CategoryViewController {
     }
 }
 
-extension CategoryViewController {
-    
-    static func makeCategoryViewController(from storyboard: UIStoryboard, delegate: CategoryViewControllerDelegate?) -> CategoryViewController {
-        
-        let categoryViewController = storyboard.instantiateViewController(withIdentifier: "category_view_controller") as! CategoryViewController
-        categoryViewController.categoryViewControllerDelegate = delegate
-        
-        return categoryViewController
-    }
-}

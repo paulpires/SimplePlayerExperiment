@@ -22,6 +22,21 @@ class MenuViewController: UIViewController {
     fileprivate var collectionViewDataSource: MenuCollectionViewDataSource?
     fileprivate var collectionViewDelegate: MenuCollectionViewDelegate?
     
+    init(delegate: MenuViewControllerDelegate) {
+        
+        super.init(nibName:nil, bundle:nil)
+        
+        self.menuViewControllerDelegate = delegate
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension MenuViewController {
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -56,13 +71,3 @@ class MenuViewController: UIViewController {
     }
 }
 
-extension MenuViewController {
-    
-    static func makeMenuViewController(from storyboard: UIStoryboard, delegate: MenuViewControllerDelegate?) -> MenuViewController {
-        
-        let menuViewController = storyboard.instantiateViewController(withIdentifier: "menu_view_controller") as! MenuViewController
-        menuViewController.menuViewControllerDelegate = delegate
-        
-        return menuViewController
-    }
-}

@@ -25,12 +25,25 @@ class VideoOverviewViewController: UIViewController {
     var seriesDataSource: SeriesCollectionViewDataSource?
     var seriesDelegate: SeriesCollectionViewDelegate?
 
+    init() {
+        
+        super.init(nibName:nil, bundle:nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension VideoOverviewViewController {
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        
         createChildControllers()
-
+        
         createDataSources()
         
         view.bringSubview(toFront: self.closeButton)
@@ -40,24 +53,22 @@ class VideoOverviewViewController: UIViewController {
         
         guard let videoViewModel = self.viewModels.first?.first else { return }
         
-        // Create child view controllers
-        let seriesViewController = SeriesViewController.makeSeriesViewController(from: self.storyboard!)
-        let detailViewController = VideoDetailViewController.makeVideoViewController(from: self.storyboard!, video: videoViewModel.video, delegate: nil)
-        
+        let seriesViewController = SeriesViewController()
         self.seriesViewController = seriesViewController
-        self.detailViewController = detailViewController
         
-        // Add child view controller to this one
         addChildViewController(seriesViewController)
         view.addSubview(seriesViewController.view)
         seriesViewController.view.frame = view.bounds
         seriesViewController.didMove(toParentViewController: self)
+        
+        
+        let detailViewController = VideoDetailViewController(video: videoViewModel.video, delegate: nil)
+        self.detailViewController = detailViewController
     }
     
     func createDataSources() {
         
-        guard let seriesViewController = seriesViewController,
-                let videoViewModel = self.viewModels.first?.first else { return }
+        guard let seriesViewController = seriesViewController else { return }
         
         // Setup delegates/datasource for the child series
         let seriesDelegate = SeriesCollectionViewDelegate(videoViewModels: viewModels)
@@ -68,27 +79,12 @@ class VideoOverviewViewController: UIViewController {
         seriesViewController.setCollectionViewDataSource(dataSource: seriesDataSource)
         self.seriesDataSource = seriesDataSource
         
-        // Get the video details child controller.
-        let detailViewController = VideoDetailViewController.makeVideoViewController(from: self.storyboard!, video: videoViewModel.video, delegate: nil)
-        seriesDataSource.headerView = detailViewController.view
-        seriesDelegate.headerView = detailViewController.view
-        
-        self.detailViewController = detailViewController
+        seriesDataSource.headerView = self.detailViewController?.view
+        seriesDelegate.headerView = self.detailViewController?.view
     }
     
-    @objc private func closePressed() {
+    @objc fileprivate func closePressed() {
         
         self.dismiss(animated: true, completion: nil)
-    }
-}
-
-
-extension VideoOverviewViewController {
-    
-    static func makeVideoOverviewViewController(from storyboard: UIStoryboard) -> VideoOverviewViewController {
-        
-        let videoOverviewViewController = storyboard.instantiateViewController(withIdentifier: "video_overview_view_controller") as! VideoOverviewViewController
-        
-        return videoOverviewViewController
     }
 }

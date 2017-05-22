@@ -13,7 +13,6 @@ class AppRouter {
     
     fileprivate var appLaunchOptions: [UIApplicationLaunchOptionsKey: Any]?
     fileprivate let window: UIWindow = UIWindow(frame: UIScreen.main.bounds)
-    fileprivate let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     fileprivate var splitViewController: SplitViewController!
     fileprivate var masterNavigationController: UINavigationController!
@@ -35,8 +34,8 @@ class AppRouter {
     
     private func createViewControllers() {
         
-        menuViewController = MenuViewController.makeMenuViewController(from: storyboard, delegate: self)
-        categoryViewController = CategoryViewController.makeCategoryViewController(from: storyboard, delegate: self)
+        menuViewController = MenuViewController(delegate: self)
+        categoryViewController = CategoryViewController(delegate: self)
         
         splitViewController = SplitViewController()
         
@@ -67,7 +66,7 @@ extension AppRouter {
     
     public func showVideoOverviewViewController(for video: Video) {
     
-        let videoOverviewViewController = VideoOverviewViewController.makeVideoOverviewViewController(from: storyboard)
+        let videoOverviewViewController = VideoOverviewViewController()
         splitViewController.present(videoOverviewViewController, animated: true, completion: nil)
     }
 }

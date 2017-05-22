@@ -21,7 +21,11 @@
 		CF5C6D5D1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C6D5C1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift */; };
 		CF6B1F921EB8EA2600F73CE2 /* CoreAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */; };
 		CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */; };
-		CF6B1F941EB8EAA200F73CE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07B81EB8E79000D7E9C9 /* Main.storyboard */; };
+		CF8A40FD1ED2EC4E00ADAA9C /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */; };
+		CF8A40FF1ED2F70900ADAA9C /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A40FE1ED2F70900ADAA9C /* CategoryViewController.xib */; };
+		CF8A41011ED2F7B200ADAA9C /* VideoOverviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A41001ED2F7B200ADAA9C /* VideoOverviewViewController.xib */; };
+		CF8A41031ED2F85100ADAA9C /* SeriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A41021ED2F85100ADAA9C /* SeriesViewController.xib */; };
+		CF8A41051ED2FB3700ADAA9C /* VideoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A41041ED2FB3700ADAA9C /* VideoDetailViewController.xib */; };
 		CF8F69621EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69611EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift */; };
 		CF8F69651EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69641EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift */; };
 		CF8F69671EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69661EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift */; };
@@ -92,6 +96,11 @@
 		CF5C6D5A1EB9CE1400F1BB5C /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
 		CF5C6D5C1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortraitPosterCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CoreAssets.xcassets; sourceTree = "<group>"; };
+		CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		CF8A40FE1ED2F70900ADAA9C /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		CF8A41001ED2F7B200ADAA9C /* VideoOverviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoOverviewViewController.xib; sourceTree = "<group>"; };
+		CF8A41021ED2F85100ADAA9C /* SeriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeriesViewController.xib; sourceTree = "<group>"; };
+		CF8A41041ED2FB3700ADAA9C /* VideoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoDetailViewController.xib; sourceTree = "<group>"; };
 		CF8F69611EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		CF8F69641EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		CF8F69661EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -121,7 +130,6 @@
 		CFFE07901EB8E64200D7E9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFFE07B41EB8E79000D7E9C9 /* LookAndFeel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookAndFeel.swift; sourceTree = "<group>"; };
 		CFFE07B71EB8E79000D7E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CFFE07B91EB8E79000D7E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFFE07BB1EB8E79000D7E9C9 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		CFFE07BD1EB8E79000D7E9C9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFFE07BE1EB8E79000D7E9C9 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -241,7 +249,6 @@
 				CFD5AD1B1EBB400300FAC6DE /* Utilities */,
 				CFFE07B31EB8E79000D7E9C9 /* Appearance */,
 				CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */,
-				CFFE07B81EB8E79000D7E9C9 /* Main.storyboard */,
 				CFFE07BA1EB8E79000D7E9C9 /* Cells */,
 				CFFE07BC1EB8E79000D7E9C9 /* Core */,
 				CFFE07BF1EB8E79000D7E9C9 /* Info.plist */,
@@ -334,10 +341,15 @@
 			children = (
 				CFBE430E1EBB8AE000C19AC6 /* SplitViewController.swift */,
 				CFFE07C71EB8E79000D7E9C9 /* CategoryViewController.swift */,
+				CF8A40FE1ED2F70900ADAA9C /* CategoryViewController.xib */,
 				CFFE07C81EB8E79000D7E9C9 /* MenuViewController.swift */,
+				CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */,
 				CF972A671EC3565B00C26EE3 /* VideoDetailViewController.swift */,
+				CF8A41041ED2FB3700ADAA9C /* VideoDetailViewController.xib */,
 				CFD2EB611ECB39AD00D3F1A7 /* SeriesViewController.swift */,
+				CF8A41021ED2F85100ADAA9C /* SeriesViewController.xib */,
 				CFFCB87B1ECDF299000A03CC /* VideoOverviewViewController.swift */,
+				CF8A41001ED2F7B200ADAA9C /* VideoOverviewViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -481,15 +493,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8A40FF1ED2F70900ADAA9C /* CategoryViewController.xib in Resources */,
 				CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */,
 				CFEBC6EF1EC9B97000E50B7E /* MenuCollectionViewCell.xib in Resources */,
-				CF6B1F941EB8EAA200F73CE2 /* Main.storyboard in Resources */,
+				CF8A41031ED2F85100ADAA9C /* SeriesViewController.xib in Resources */,
+				CF8A40FD1ED2EC4E00ADAA9C /* MenuViewController.xib in Resources */,
 				CFEBC6F51EC9BB4B00E50B7E /* CategorySectionHeaderSupplementaryView.xib in Resources */,
+				CF8A41051ED2FB3700ADAA9C /* VideoDetailViewController.xib in Resources */,
 				CFEBC6F11EC9BA1F00E50B7E /* PortraitPosterCollectionViewCell.xib in Resources */,
 				CFBE43151EBCB87D00C19AC6 /* IconAssets.xcassets in Resources */,
 				CFD2EB5F1ECA052A00D3F1A7 /* CellAssets.xcassets in Resources */,
 				CFEBC6F31EC9BAB000E50B7E /* LargeLandscapePosterCollectionViewCell.xib in Resources */,
 				CF18D9361ECB3B760028BE5C /* EpisodeCollectionViewCell.xib in Resources */,
+				CF8A41011ED2F7B200ADAA9C /* VideoOverviewViewController.xib in Resources */,
 				CF18D9391ECB57970028BE5C /* EpisodeSectionHeaderSupplementaryView.xib in Resources */,
 				CF5C6D5B1EB9CE1400F1BB5C /* TestAssets.xcassets in Resources */,
 				CF6B1F921EB8EA2600F73CE2 /* CoreAssets.xcassets in Resources */,
@@ -726,14 +742,6 @@
 				CFFE07B71EB8E79000D7E9C9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		CFFE07B81EB8E79000D7E9C9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CFFE07B91EB8E79000D7E9C9 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

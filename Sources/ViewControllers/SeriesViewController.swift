@@ -16,6 +16,19 @@ class SeriesViewController: UIViewController {
     fileprivate var collectionViewDataSource: UICollectionViewDataSource?
     fileprivate var collectionViewDelegate: UICollectionViewDelegate?
     
+    init() {
+        
+        super.init(nibName:nil, bundle:nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension SeriesViewController {
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -48,15 +61,5 @@ class SeriesViewController: UIViewController {
         
         let nib2 = UINib(nibName: "EpisodeSectionHeaderSupplementaryView", bundle: nil)
         collectionView.register(nib2, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "series_header")
-    }
-}
-
-extension SeriesViewController {
-    
-    static func makeSeriesViewController(from storyboard: UIStoryboard) -> SeriesViewController {
-        
-        let seriesViewController = storyboard.instantiateViewController(withIdentifier: "series_view_controller") as! SeriesViewController
-        
-        return seriesViewController
     }
 }
