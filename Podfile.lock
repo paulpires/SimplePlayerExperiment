@@ -1,21 +1,22 @@
 PODS:
-  - RxCocoa (3.4.1):
-    - RxSwift (~> 3.4)
-  - RxSwift (3.4.1)
+  - Realm (2.7.0):
+    - Realm/Headers (= 2.7.0)
+  - Realm/Headers (2.7.0)
+  - RealmSwift (2.7.0):
+    - Realm (= 2.7.0)
   - Siesta (1.1.1):
     - Siesta/Core (= 1.1.1)
   - Siesta/Core (1.1.1)
 
 DEPENDENCIES:
-  - RxCocoa (~> 3.0)
-  - RxSwift (~> 3.0)
+  - RealmSwift
   - Siesta (~> 1.0)
 
 SPEC CHECKSUMS:
-  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
-  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
+  RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   Siesta: 920372f09b7cfd798074d85d8f3cf8505529a56e
 
-PODFILE CHECKSUM: 2a43284715fb73f90b765f37c1e459f7a2ccea6b
+PODFILE CHECKSUM: fc0d1c648be62716c925bee456ca0756d78d85ae
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

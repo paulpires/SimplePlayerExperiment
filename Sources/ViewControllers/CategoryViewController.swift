@@ -24,16 +24,27 @@ class CategoryViewController: UIViewController {
         }
     }
     
+    let provider: Provider
+    
+    var videoViewModels = [[VideoViewModel]]() {
+        
+        didSet {
+            
+            self.reloadWith(oldData: oldValue, newData: videoViewModels)
+        }
+    }
+    
     weak var categoryViewControllerDelegate: CategoryViewControllerDelegate?
     
     fileprivate var collectionViewDataSource: CategoryCollectionViewDataSource?
     fileprivate var collectionViewDelegate: CategoryCollectionViewDelegate?
     
-    init(delegate: CategoryViewControllerDelegate) {
+    init(provider: Provider, delegate: CategoryViewControllerDelegate) {
+        
+        self.provider = provider
+        self.categoryViewControllerDelegate = delegate
         
         super.init(nibName:nil, bundle:nil)
-        
-        self.categoryViewControllerDelegate = delegate
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,8 +61,9 @@ extension CategoryViewController {
         
         setupControllerDetails()
         
-        setupCollectionViewDelegates()
         registerCollectionViewCells()
+        
+        updateData()
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -77,21 +89,27 @@ extension CategoryViewController {
 
 extension CategoryViewController {
     
+    fileprivate func updateData() {
+
+        // This can be async, provider returns from database.  For now it's hard coded in
+        videoViewModels = provider.categories()
+    }
+    
     fileprivate func setupControllerDetails() {
         
         self.title = "Videos"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     }
     
-    fileprivate func setupCollectionViewDelegates() {
+    fileprivate func reloadWith(oldData: [[VideoViewModel]], newData: [[VideoViewModel]]) {
         
-        let videoViewModels = DevUtiltiies.generateVideoViewModels()
+        self.collectionViewDataSource =  CategoryCollectionViewDataSource(videoViewModels: videoViewModels)
+        self.collectionViewDelegate = CategoryCollectionViewDelegate(videoViewModels: videoViewModels, categoryViewController: self)
         
-        collectionViewDataSource =  CategoryCollectionViewDataSource(videoViewModels: videoViewModels)
-        collectionViewDelegate = CategoryCollectionViewDelegate(videoViewModels: videoViewModels, categoryViewController: self)
+        self.collectionView.dataSource = collectionViewDataSource
+        self.collectionView.delegate = collectionViewDelegate
         
-        collectionView.dataSource = collectionViewDataSource
-        collectionView.delegate = collectionViewDelegate
+        self.collectionView.reloadData()
     }
     
     fileprivate func registerCollectionViewCells() {

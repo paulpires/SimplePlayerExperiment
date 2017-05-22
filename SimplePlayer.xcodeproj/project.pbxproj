@@ -28,6 +28,9 @@
 		CF8A41051ED2FB3700ADAA9C /* VideoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A41041ED2FB3700ADAA9C /* VideoDetailViewController.xib */; };
 		CF8A41071ED3143D00ADAA9C /* HeaderSeriesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A41061ED3143D00ADAA9C /* HeaderSeriesCollectionViewDataSource.swift */; };
 		CF8A41091ED3197400ADAA9C /* HeaderSeriesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A41081ED3197400ADAA9C /* HeaderSeriesCollectionViewDelegate.swift */; };
+		CF8A410E1ED3287300ADAA9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A410C1ED3287300ADAA9C /* AppDelegate.swift */; };
+		CF8A410F1ED3287300ADAA9C /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A410D1ED3287300ADAA9C /* AppRouter.swift */; };
+		CF8A41111ED3383700ADAA9C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A41101ED3383700ADAA9C /* Provider.swift */; };
 		CF8F69621EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69611EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift */; };
 		CF8F69651EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69641EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift */; };
 		CF8F69671EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F69661EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift */; };
@@ -52,8 +55,6 @@
 		CFFE078F1EB8E64200D7E9C9 /* SimplePlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE078E1EB8E64200D7E9C9 /* SimplePlayerUITests.swift */; };
 		CFFE07CC1EB8E79000D7E9C9 /* LookAndFeel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07B41EB8E79000D7E9C9 /* LookAndFeel.swift */; };
 		CFFE07D01EB8E79000D7E9C9 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07BB1EB8E79000D7E9C9 /* MenuCollectionViewCell.swift */; };
-		CFFE07D11EB8E79000D7E9C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07BD1EB8E79000D7E9C9 /* AppDelegate.swift */; };
-		CFFE07D21EB8E79000D7E9C9 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07BE1EB8E79000D7E9C9 /* AppRouter.swift */; };
 		CFFE07D41EB8E79000D7E9C9 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07C11EB8E79000D7E9C9 /* MenuItem.swift */; };
 		CFFE07D51EB8E79000D7E9C9 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07C21EB8E79000D7E9C9 /* Video.swift */; };
 		CFFE07D71EB8E79000D7E9C9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE07C81EB8E79000D7E9C9 /* MenuViewController.swift */; };
@@ -105,6 +106,9 @@
 		CF8A41041ED2FB3700ADAA9C /* VideoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoDetailViewController.xib; sourceTree = "<group>"; };
 		CF8A41061ED3143D00ADAA9C /* HeaderSeriesCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSeriesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		CF8A41081ED3197400ADAA9C /* HeaderSeriesCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSeriesCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		CF8A410C1ED3287300ADAA9C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF8A410D1ED3287300ADAA9C /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		CF8A41101ED3383700ADAA9C /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		CF8F69611EC5EA3600FFADD8 /* CategoryCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		CF8F69641EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		CF8F69661EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -135,8 +139,6 @@
 		CFFE07B41EB8E79000D7E9C9 /* LookAndFeel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookAndFeel.swift; sourceTree = "<group>"; };
 		CFFE07B71EB8E79000D7E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFFE07BB1EB8E79000D7E9C9 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
-		CFFE07BD1EB8E79000D7E9C9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFFE07BE1EB8E79000D7E9C9 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		CFFE07BF1EB8E79000D7E9C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFFE07C11EB8E79000D7E9C9 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		CFFE07C21EB8E79000D7E9C9 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
@@ -183,6 +185,23 @@
 				34745CF96F4A5D049E490B69 /* Pods_SimplePlayerUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF8A410A1ED3285D00ADAA9C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CF8A41101ED3383700ADAA9C /* Provider.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CF8A410B1ED3287300ADAA9C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CF8A410C1ED3287300ADAA9C /* AppDelegate.swift */,
+				CF8A410D1ED3287300ADAA9C /* AppRouter.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		CF8F69601EC5EA2400FFADD8 /* DataSources */ = {
@@ -251,19 +270,20 @@
 		CFFE07B21EB8E79000D7E9C9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CF8F69601EC5EA2400FFADD8 /* DataSources */,
-				CFD5AD1B1EBB400300FAC6DE /* Utilities */,
-				CFFE07B31EB8E79000D7E9C9 /* Appearance */,
 				CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */,
-				CFFE07BA1EB8E79000D7E9C9 /* Cells */,
-				CFFE07BC1EB8E79000D7E9C9 /* Core */,
 				CFFE07BF1EB8E79000D7E9C9 /* Info.plist */,
+				CFD5AD1B1EBB400300FAC6DE /* Utilities */,
+				CF8A410B1ED3287300ADAA9C /* Main */,
+				CF8A410A1ED3285D00ADAA9C /* Data */,
 				CFFE07C01EB8E79000D7E9C9 /* Models */,
+				CFFE07C91EB8E79000D7E9C9 /* ViewModels */,
+				CF8F69601EC5EA2400FFADD8 /* DataSources */,
+				CFFE07B31EB8E79000D7E9C9 /* Appearance */,
 				CFFE07C31EB8E79000D7E9C9 /* Networking */,
 				CFFE07C41EB8E79000D7E9C9 /* Protocols */,
 				CFFE07C51EB8E79000D7E9C9 /* Resources */,
 				CFFE07C61EB8E79000D7E9C9 /* ViewControllers */,
-				CFFE07C91EB8E79000D7E9C9 /* ViewModels */,
+				CFFE07BA1EB8E79000D7E9C9 /* Cells */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -295,15 +315,6 @@
 				CF18D9381ECB57970028BE5C /* EpisodeSectionHeaderSupplementaryView.xib */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		CFFE07BC1EB8E79000D7E9C9 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				CFFE07BD1EB8E79000D7E9C9 /* AppDelegate.swift */,
-				CFFE07BE1EB8E79000D7E9C9 /* AppRouter.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		CFFE07C01EB8E79000D7E9C9 /* Models */ = {
@@ -577,7 +588,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2FFF34EF40AA8FAF01F172B3 /* [CP] Copy Pods Resources */ = {
@@ -607,7 +618,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C6CA6F40955DB7B42C607AB6 /* [CP] Embed Pods Frameworks */ = {
@@ -637,7 +648,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E4FB674410B74EF1C064F428 /* [CP] Embed Pods Frameworks */ = {
@@ -679,18 +690,18 @@
 			files = (
 				CF18D9341ECB3B680028BE5C /* EpisodeCollectionViewCell.swift in Sources */,
 				CF5C6D591EB9CD8500F1BB5C /* CategoryViewController.swift in Sources */,
-				CFFE07D21EB8E79000D7E9C9 /* AppRouter.swift in Sources */,
 				CF8A41071ED3143D00ADAA9C /* HeaderSeriesCollectionViewDataSource.swift in Sources */,
 				CFFE07D51EB8E79000D7E9C9 /* Video.swift in Sources */,
 				CF18D9401ECC9B7F0028BE5C /* SeriesCollectionViewDataSource.swift in Sources */,
 				CF8F69671EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift in Sources */,
 				CF8F69691EC5F5E100FFADD8 /* MenuCollectionViewDelegate.swift in Sources */,
+				CF8A41111ED3383700ADAA9C /* Provider.swift in Sources */,
 				CF8F69651EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift in Sources */,
-				CFFE07D11EB8E79000D7E9C9 /* AppDelegate.swift in Sources */,
 				CFBE430D1EBB889300C19AC6 /* CategoryCollectionViewMetrics.swift in Sources */,
 				CFBE430F1EBB8AE000C19AC6 /* SplitViewController.swift in Sources */,
 				CF5C6D5D1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift in Sources */,
 				CFFE07CC1EB8E79000D7E9C9 /* LookAndFeel.swift in Sources */,
+				CF8A410F1ED3287300ADAA9C /* AppRouter.swift in Sources */,
 				CFBE430B1EBB886000C19AC6 /* ViewModel.swift in Sources */,
 				CFFE07D01EB8E79000D7E9C9 /* MenuCollectionViewCell.swift in Sources */,
 				CF18D9421ECC9C630028BE5C /* SeriesCollectionViewDelegate.swift in Sources */,
@@ -701,6 +712,7 @@
 				CF972A681EC3565B00C26EE3 /* VideoDetailViewController.swift in Sources */,
 				CFBE43091EBB884E00C19AC6 /* ViewModelDisplayable.swift in Sources */,
 				CFD2EB621ECB39AD00D3F1A7 /* SeriesViewController.swift in Sources */,
+				CF8A410E1ED3287300ADAA9C /* AppDelegate.swift in Sources */,
 				CFFE07DB1EB8E8D700D7E9C9 /* VideoViewModel.swift in Sources */,
 				CF8A41091ED3197400ADAA9C /* HeaderSeriesCollectionViewDelegate.swift in Sources */,
 				CFD5AD1D1EBB400300FAC6DE /* DevUtilities.swift in Sources */,
