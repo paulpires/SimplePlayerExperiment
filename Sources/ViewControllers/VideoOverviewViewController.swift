@@ -60,7 +60,12 @@ extension VideoOverviewViewController {
     
     fileprivate func createChildControllers() {
         
-        guard let videoViewModel = self.viewModels.first?.first else { return }
+        createSeriesChildController()
+        
+        createDetailChildController()
+    }
+    
+    private func createSeriesChildController() {
         
         let seriesViewController = SeriesViewController()
         self.seriesViewController = seriesViewController
@@ -69,6 +74,11 @@ extension VideoOverviewViewController {
         view.addSubview(seriesViewController.view)
         seriesViewController.view.frame = view.bounds
         seriesViewController.didMove(toParentViewController: self)
+    }
+    
+    private func createDetailChildController() {
+        
+        guard let videoViewModel = self.viewModels.first?.first else { return }
         
         let detailViewController = VideoDetailViewController(video: videoViewModel.video, delegate: nil)
         self.detailViewController = detailViewController
