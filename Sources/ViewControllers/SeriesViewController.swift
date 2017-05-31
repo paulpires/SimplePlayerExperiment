@@ -11,12 +11,29 @@ import UIKit
 
 class SeriesViewController: UIViewController {
     
+    @IBOutlet var closeButton: UIButton! {
+        didSet {
+            closeButton.addTarget(self, action: #selector(closePressed), for: .touchUpInside)
+        }
+    }
     @IBOutlet var collectionView: UICollectionView!
     
     fileprivate var collectionViewDataSource: UICollectionViewDataSource?
     fileprivate var collectionViewDelegate: UICollectionViewDelegate?
     
-    init() {
+    let provider: Provider
+    
+    var videoViewModels = [[VideoViewModel]]() {
+        
+        didSet {
+            
+            self.reloadWith(oldData: oldValue, newData: videoViewModels)
+        }
+    }
+    
+    init(provider: Provider) {
+        
+        self.provider = provider
         
         super.init(nibName:nil, bundle:nil)
     }
@@ -24,7 +41,7 @@ class SeriesViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         
         fatalError("init(coder:) has not been implemented")
-    }
+    } 
 }
 
 extension SeriesViewController {
@@ -35,13 +52,40 @@ extension SeriesViewController {
         
         setupControllerDetails()
         registerCollectionViewCells()
+        
+        updateData()
     }
 }
 
 extension SeriesViewController {
     
+    @objc fileprivate func closePressed() {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension SeriesViewController {
+    
+    fileprivate func updateData() {
+        
+        videoViewModels = provider.seriesVideoModels()
+    }
+    
     fileprivate func setupControllerDetails() {
 
+        self.title = "Series Data"
+    }
+    
+    fileprivate func reloadWith(oldData: [[VideoViewModel]], newData: [[VideoViewModel]]) {
+        
+        self.collectionViewDataSource =  SeriesCollectionViewDataSource(videoViewModels: videoViewModels)
+        self.collectionViewDelegate = SeriesCollectionViewDelegate(videoViewModels: videoViewModels)
+        
+        self.collectionView.dataSource = collectionViewDataSource
+        self.collectionView.delegate = collectionViewDelegate
+        
+        self.collectionView.reloadData()
     }
     
     fileprivate func registerCollectionViewCells() {
@@ -51,20 +95,5 @@ extension SeriesViewController {
         
         let nib2 = UINib(nibName: "EpisodeSectionHeaderSupplementaryView", bundle: nil)
         collectionView.register(nib2, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "header_supplementary_view")
-    }
-}
-
-extension SeriesViewController {
-    
-    public func setCollectionViewDataSource(dataSource: UICollectionViewDataSource) {
-        
-        self.collectionViewDataSource = dataSource
-        collectionView.dataSource = dataSource
-    }
-    
-    public func setCollectionViewDelegate(delegate: UICollectionViewDelegate) {
-        
-        self.collectionViewDelegate = delegate
-        collectionView.delegate = delegate
     }
 }

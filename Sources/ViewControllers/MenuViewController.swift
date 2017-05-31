@@ -19,14 +19,25 @@ class MenuViewController: UIViewController {
     
     weak var menuViewControllerDelegate: MenuViewControllerDelegate?
     
+    let provider: Provider
+    
     fileprivate var collectionViewDataSource: MenuCollectionViewDataSource?
     fileprivate var collectionViewDelegate: MenuCollectionViewDelegate?
     
-    init(delegate: MenuViewControllerDelegate) {
+    fileprivate var menuItemViewModels = [MenuItemViewModel]() {
+        
+        didSet {
+            
+            self.reloadWith(oldData: oldValue, newData: menuItemViewModels)
+        }
+    }
+    
+    init(provider: Provider, delegate: MenuViewControllerDelegate) {
+        
+        self.provider = provider
+        self.menuViewControllerDelegate = delegate
         
         super.init(nibName:nil, bundle:nil)
-        
-        self.menuViewControllerDelegate = delegate
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,21 +53,26 @@ extension MenuViewController {
         super.viewDidLoad()
         
         setupControllerDetails()
-        
-        setupCollectionViewDelegates()
         registerCollectionViewCells()
+        
+        updateData()
     }
 }
 
 extension MenuViewController {
     
+    fileprivate func updateData() {
+        
+        menuItemViewModels = provider.menuViewModels()
+    }
+ 
     fileprivate func setupControllerDetails() {
         
         self.title = "Menu"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     }
     
-    fileprivate func setupCollectionViewDelegates() {
+    fileprivate func reloadWith(oldData: [MenuItemViewModel], newData: [MenuItemViewModel]) {
         
         let menuViewModels = DevUtiltiies.generateMenuViewModels()
         
@@ -65,6 +81,8 @@ extension MenuViewController {
         
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
+        
+        collectionView.reloadData()
     }
     
     fileprivate func registerCollectionViewCells() {

@@ -36,4 +36,16 @@ class Provider {
         // which may go to the networks
         return DevUtiltiies.generateVideoViewModels()
     }
+    
+    func seriesVideoModels() -> [[VideoViewModel]] {
+        
+        return DevUtiltiies.generateSeriesViewModels()
+    }
+    
+    
+    func menuViewModels() ->  [MenuItemViewModel] {
+        
+        return DevUtiltiies.generateMenuViewModels()
+    }
+
 }

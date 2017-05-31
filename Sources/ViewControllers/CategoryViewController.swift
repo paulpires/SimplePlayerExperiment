@@ -124,4 +124,3 @@ extension CategoryViewController {
         collectionView.register(headerSupplementaryNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "category_section_header")
     }
 }
-

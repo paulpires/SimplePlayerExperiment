@@ -45,5 +45,12 @@ extension SeriesCollectionViewDataSource: UICollectionViewDataSource {
         cell.viewModel = episode
         
         return cell
-    } 
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "header_supplementary_view", for: indexPath)
+ 
+        return view
+    }
 }

@@ -38,7 +38,7 @@ class AppRouter {
 
     private func createViewControllers() {
         
-        menuViewController = MenuViewController(delegate: self)
+        menuViewController = MenuViewController(provider: self.provider, delegate: self)
         categoryViewController = CategoryViewController(provider: self.provider, delegate: self)
         
         splitViewController = SplitViewController()
@@ -68,10 +68,10 @@ class AppRouter {
 // MARK: - View controller presenting
 extension AppRouter {
     
-    public func showVideoOverviewViewController(for video: Video) {
+    public func showSeriesViewController(for video: Video) {
     
-        let videoOverviewViewController = VideoOverviewViewController()
-        splitViewController.present(videoOverviewViewController, animated: true, completion: nil)
+        let seriesViewController = SeriesViewController(provider: self.provider)
+        splitViewController.present(seriesViewController, animated: true, completion: nil)
     }
 }
 
@@ -88,7 +88,7 @@ extension AppRouter: CategoryViewControllerDelegate {
     
     public func categoryViewController(_ categoryViewController: CategoryViewController, didSelect video: Video) {
        
-        showVideoOverviewViewController(for: video)
+        showSeriesViewController(for: video)
     }
 }
 

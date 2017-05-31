@@ -27,6 +27,14 @@ extension SeriesCollectionViewDelegate: UICollectionViewDelegate {
 
 extension SeriesCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        let width = collectionView.bounds.width
+        let height: CGFloat = 250
+        
+        return CGSize(width: width, height: height)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         
         return 0
