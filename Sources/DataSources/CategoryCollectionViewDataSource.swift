@@ -11,11 +11,11 @@ import UIKit
 
 class CategoryCollectionViewDataSource: NSObject {
     
-    var videoViewModels: [[VideoViewModel]]
+    var categoryViewModels: [CategoryViewModel]
     
-    init(videoViewModels: [[VideoViewModel]]) {
+    init(categoryViewModels: [CategoryViewModel]) {
         
-        self.videoViewModels = videoViewModels
+        self.categoryViewModels = categoryViewModels
     }
 }
 
@@ -23,34 +23,37 @@ extension CategoryCollectionViewDataSource: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return videoViewModels.count
+        return categoryViewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        let section = videoViewModels[section]
-        return section.count
+        let categoryVideos = categoryViewModels[section].category.videos
+        return categoryVideos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let section = videoViewModels[indexPath.section]
-        let viewModel = section[indexPath.row]
+        let categoryViewModel = categoryViewModels[indexPath.section]
+        let categoryVideos = categoryViewModel.category.videos
+        let videoViewModel = VideoViewModel(video: categoryVideos[indexPath.row])
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.cellIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: videoViewModel.cellIdentifier, for: indexPath)
         
         var viewModelDisplayableCell = cell as! ViewModelDisplayable
-        viewModelDisplayableCell.viewModel = viewModel
+        viewModelDisplayableCell.viewModel = videoViewModel
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
+        let categoryViewModel = categoryViewModels[indexPath.section]
+        
         let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "category_section_header", for: indexPath)
         
         let sectionHeaderReusableView = reusableView as! CategorySectionHeaderSupplementaryView
-        sectionHeaderReusableView.categoryTitleLabel.text = "Section \(indexPath.section)"
+        sectionHeaderReusableView.categoryTitleLabel.text = categoryViewModel.title
         
         return sectionHeaderReusableView
     }

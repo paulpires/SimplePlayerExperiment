@@ -21,20 +21,14 @@ class Provider {
         self.networkAPI = networkAPI
     }
     
-    func categories() -> [[VideoViewModel]] {
+    func menuViewModels() ->  [MenuItemViewModel] {
         
-        // from database
+        return DevUtiltiies.generateMenuViewModels()
+    }
+    
+    func categoriesViewModels() -> [CategoryViewModel] {
         
-//        self.networkAPI.loadCategories {
-//            
-//            
-//            self.storeage.fetchMeCategories {
-//                
-//            }
-//        }
-        
-        // which may go to the networks
-        return DevUtiltiies.generateVideoViewModels()
+        return DevUtiltiies.generateCategoryViewModels()
     }
     
     func seriesVideoModels() -> [[VideoViewModel]] {
@@ -43,9 +37,6 @@ class Provider {
     }
     
     
-    func menuViewModels() ->  [MenuItemViewModel] {
-        
-        return DevUtiltiies.generateMenuViewModels()
-    }
+   
 
 }

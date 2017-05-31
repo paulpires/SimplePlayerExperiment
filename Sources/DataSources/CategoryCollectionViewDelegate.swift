@@ -11,13 +11,13 @@ import UIKit
 
 class CategoryCollectionViewDelegate: NSObject {
     
-    var videoViewModels: [[VideoViewModel]]
+    var categoryViewModels: [CategoryViewModel]
     
     weak var categoryViewController: CategoryViewController?
     
-    init(videoViewModels: [[VideoViewModel]], categoryViewController: CategoryViewController) {
+    init(categoryViewModels: [CategoryViewModel], categoryViewController: CategoryViewController) {
         
-        self.videoViewModels = videoViewModels
+        self.categoryViewModels = categoryViewModels
         self.categoryViewController = categoryViewController
     }
 }
@@ -26,12 +26,12 @@ extension CategoryCollectionViewDelegate: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let section = self.videoViewModels[indexPath.section]
-        let viewModel = section[indexPath.row]
+        let categoryViewModel = self.categoryViewModels[indexPath.section]
+        let video = categoryViewModel.category.videos[indexPath.row]
         
         guard let categoryViewController = categoryViewController else { return }
         
-        categoryViewController.categoryViewControllerDelegate?.categoryViewController(categoryViewController, didSelect: viewModel.video)
+        categoryViewController.categoryViewControllerDelegate?.categoryViewController(categoryViewController, didSelect: video)
     }
 }
 
@@ -52,10 +52,12 @@ extension CategoryCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
         let edgeSpacing = 2.0 * CategoryViewControllerDesign.Sizes.cellInterimSpacing
         let numberOfColumns = collectionView.traitCollection.horizontalSizeClass == .regular ? CategoryViewControllerDesign.Sizes.columnsRegular : CategoryViewControllerDesign.Sizes.columnsCompact
         
-        let section = self.videoViewModels[indexPath.section]
-        let viewModel = section[indexPath.row]
+        let categoryViewModel = self.categoryViewModels[indexPath.section]
+        let video = categoryViewModel.category.videos[indexPath.row]
+        let videoViewModel = VideoViewModel(video: video)
+
         
-        if viewModel.cellIdentifier == "large_landscape_poster_cell" {
+        if videoViewModel.cellIdentifier == "large_landscape_poster_cell" {
             
             let width = (collectionView.bounds.width - edgeSpacing)
             let height = width * 0.56

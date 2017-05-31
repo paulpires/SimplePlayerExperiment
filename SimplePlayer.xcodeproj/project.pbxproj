@@ -21,6 +21,8 @@
 		CF5C6D5D1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C6D5C1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift */; };
 		CF6B1F921EB8EA2600F73CE2 /* CoreAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */; };
 		CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */; };
+		CF84F7D51EDEF13A000F15A1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84F7D41EDEF13A000F15A1 /* Category.swift */; };
+		CF84F7D71EDEF195000F15A1 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84F7D61EDEF195000F15A1 /* CategoryViewModel.swift */; };
 		CF8A40FD1ED2EC4E00ADAA9C /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */; };
 		CF8A40FF1ED2F70900ADAA9C /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A40FE1ED2F70900ADAA9C /* CategoryViewController.xib */; };
 		CF8A41031ED2F85100ADAA9C /* SeriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A41021ED2F85100ADAA9C /* SeriesViewController.xib */; };
@@ -93,6 +95,8 @@
 		CF5C6D5A1EB9CE1400F1BB5C /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
 		CF5C6D5C1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortraitPosterCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CoreAssets.xcassets; sourceTree = "<group>"; };
+		CF84F7D41EDEF13A000F15A1 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CF84F7D61EDEF195000F15A1 /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		CF8A40FE1ED2F70900ADAA9C /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
 		CF8A41021ED2F85100ADAA9C /* SeriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeriesViewController.xib; sourceTree = "<group>"; };
@@ -308,6 +312,7 @@
 			children = (
 				CFFE07C11EB8E79000D7E9C9 /* MenuItem.swift */,
 				CFFE07C21EB8E79000D7E9C9 /* Video.swift */,
+				CF84F7D41EDEF13A000F15A1 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 			children = (
 				CFFE07CA1EB8E79000D7E9C9 /* MenuItemViewModel.swift */,
 				CFFE07CB1EB8E79000D7E9C9 /* VideoViewModel.swift */,
+				CF84F7D61EDEF195000F15A1 /* CategoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -673,12 +679,14 @@
 				CFFE07D51EB8E79000D7E9C9 /* Video.swift in Sources */,
 				CF18D9401ECC9B7F0028BE5C /* SeriesCollectionViewDataSource.swift in Sources */,
 				CF8F69671EC5F5D400FFADD8 /* MenuCollectionViewDataSource.swift in Sources */,
+				CF84F7D71EDEF195000F15A1 /* CategoryViewModel.swift in Sources */,
 				CF8F69691EC5F5E100FFADD8 /* MenuCollectionViewDelegate.swift in Sources */,
 				CF8A41111ED3383700ADAA9C /* Provider.swift in Sources */,
 				CF8F69651EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift in Sources */,
 				CFBE430D1EBB889300C19AC6 /* CategoryCollectionViewMetrics.swift in Sources */,
 				CFBE430F1EBB8AE000C19AC6 /* SplitViewController.swift in Sources */,
 				CF5C6D5D1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift in Sources */,
+				CF84F7D51EDEF13A000F15A1 /* Category.swift in Sources */,
 				CFFE07CC1EB8E79000D7E9C9 /* LookAndFeel.swift in Sources */,
 				CF8A410F1ED3287300ADAA9C /* AppRouter.swift in Sources */,
 				CFBE430B1EBB886000C19AC6 /* ViewModel.swift in Sources */,

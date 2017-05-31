@@ -18,31 +18,35 @@ class DevUtiltiies {
         return 1 + mod;
     }
     
-    public static func generateVideoViewModels() -> [[VideoViewModel]] {
-
-        var sections = [[VideoViewModel]]()
-
+    public static func generateCategoryViewModels() -> [CategoryViewModel] {
+        
+        var categories = [CategoryViewModel]()
+        
         for i in 1..<4 {
             
-            var videoViewModels = [VideoViewModel]()
+            var videos = [Video]()
             
             let video = Video(identifier: "landscape_large\(i)", title: "large title 1", synopsis: "large synopsis 1")
-            let videoViewModel = VideoViewModel(video: video)
-            videoViewModels.append(videoViewModel)
+            videos.append(video)
             
             for j in 1..<16 {
                 
                 let capped = DevUtiltiies.capNumber(val: j, min: 1, max: 16)
                 
                 let video = Video(identifier: "cover\(capped)", title: "some title \(j)", synopsis: "Some synopsis \(j)")
-                let videoViewModel = VideoViewModel(video: video)
-                videoViewModels.append(videoViewModel)
+                
+                videos.append(video)
+                
             }
             
-            sections.append(videoViewModels)
+            let category = Category(identifier: "ID \(i)", title: "Category Title \(i)", synopsis: "Synopsis \(i)", videos: videos)
+
+            let categoryViewModel = CategoryViewModel(category: category)
+            
+            categories.append(categoryViewModel)
         }
         
-        return sections
+        return categories
     }
     
     public static func generateSeriesViewModels() -> [[VideoViewModel]] {

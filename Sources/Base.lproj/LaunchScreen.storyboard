@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SimplePlayer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWg-zp-yAm">
-                                <rect key="frame" x="20" y="20" width="984" height="748"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="43"/>
                                 <color key="textColor" red="0.81634676399999995" green="0.0" blue="0.0076424388419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -31,10 +31,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wWg-zp-yAm" firstAttribute="top" secondItem="NW0-pK-d9X" secondAttribute="topMargin" id="DiW-DM-fzu"/>
+                            <constraint firstAttribute="trailing" secondItem="wWg-zp-yAm" secondAttribute="trailing" id="F9O-Nz-JCh"/>
                             <constraint firstItem="HSI-tP-UhV" firstAttribute="top" secondItem="wWg-zp-yAm" secondAttribute="bottom" id="SXk-eD-S9N"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wWg-zp-yAm" secondAttribute="trailing" id="gBM-Xs-1lq"/>
-                            <constraint firstItem="wWg-zp-yAm" firstAttribute="top" secondItem="CJm-pl-ipl" secondAttribute="bottom" id="s6H-rK-cpA"/>
-                            <constraint firstItem="wWg-zp-yAm" firstAttribute="leading" secondItem="NW0-pK-d9X" secondAttribute="leadingMargin" id="w1W-AM-UE8"/>
+                            <constraint firstItem="wWg-zp-yAm" firstAttribute="leading" secondItem="NW0-pK-d9X" secondAttribute="leading" id="WgW-Hv-teM"/>
                         </constraints>
                     </view>
                 </viewController>

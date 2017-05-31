@@ -26,11 +26,11 @@ class CategoryViewController: UIViewController {
     
     let provider: Provider
     
-    var videoViewModels = [[VideoViewModel]]() {
+    var categoryViewModels = [CategoryViewModel]() {
         
         didSet {
             
-            self.reloadWith(oldData: oldValue, newData: videoViewModels)
+            self.reloadWith(oldData: oldValue, newData: categoryViewModels)
         }
     }
     
@@ -91,8 +91,7 @@ extension CategoryViewController {
     
     fileprivate func updateData() {
 
-        // This can be async, provider returns from database.  For now it's hard coded in
-        videoViewModels = provider.categories()
+        categoryViewModels = provider.categoriesViewModels()
     }
     
     fileprivate func setupControllerDetails() {
@@ -101,10 +100,10 @@ extension CategoryViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "☰", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
     }
     
-    fileprivate func reloadWith(oldData: [[VideoViewModel]], newData: [[VideoViewModel]]) {
+    fileprivate func reloadWith(oldData: [CategoryViewModel], newData: [CategoryViewModel]) {
         
-        self.collectionViewDataSource =  CategoryCollectionViewDataSource(videoViewModels: videoViewModels)
-        self.collectionViewDelegate = CategoryCollectionViewDelegate(videoViewModels: videoViewModels, categoryViewController: self)
+        self.collectionViewDataSource =  CategoryCollectionViewDataSource(categoryViewModels: categoryViewModels)
+        self.collectionViewDelegate = CategoryCollectionViewDelegate(categoryViewModels: categoryViewModels, categoryViewController: self)
         
         self.collectionView.dataSource = collectionViewDataSource
         self.collectionView.delegate = collectionViewDelegate

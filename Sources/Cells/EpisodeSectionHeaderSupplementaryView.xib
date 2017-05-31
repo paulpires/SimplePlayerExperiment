@@ -14,7 +14,21 @@
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header_supplementary_view" id="kbd-P8-zqL" customClass="EpisodeSectionHeaderSupplementaryView" customModule="SimplePlayer" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="427" height="260"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape_large2" translatesAutoresizingMaskIntoConstraints="NO" id="Wde-rf-L9W">
+                    <rect key="frame" x="0.0" y="0.0" width="427" height="260"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Wde-rf-L9W" firstAttribute="leading" secondItem="kbd-P8-zqL" secondAttribute="leading" id="9zH-Ro-Icq"/>
+                <constraint firstAttribute="trailing" secondItem="Wde-rf-L9W" secondAttribute="trailing" id="ktN-ub-t4H"/>
+                <constraint firstItem="Wde-rf-L9W" firstAttribute="top" secondItem="kbd-P8-zqL" secondAttribute="top" id="sfw-8N-tbf"/>
+                <constraint firstAttribute="bottom" secondItem="Wde-rf-L9W" secondAttribute="bottom" id="uDl-xf-A1D"/>
+            </constraints>
             <point key="canvasLocation" x="-64.5" y="-210"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <image name="landscape_large2" width="640" height="360"/>
+    </resources>
 </document>
