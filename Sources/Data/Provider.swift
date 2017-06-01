@@ -12,10 +12,10 @@ class Provider {
     
     // have to init with the database and network later
     
-    let storeage: String
-    let networkAPI: String
+    private let storeage: Store
+    private let networkAPI: String // This will be type network or something later
     
-    init(storeage: String, networkAPI: String) {
+    init(storeage: Store, networkAPI: String) {
         
         self.storeage = storeage
         self.networkAPI = networkAPI
@@ -23,20 +23,34 @@ class Provider {
     
     func menuViewModels() ->  [MenuItemViewModel] {
         
-        return DevUtiltiies.generateMenuViewModels()
+        let menuItems = self.storeage.menuItems()
+        
+        let menuViewModels = menuItems.map {
+            return MenuItemViewModel(menuItem: $0)
+        }
+        
+        return menuViewModels
     }
     
     func categoriesViewModels() -> [CategoryViewModel] {
         
-        return DevUtiltiies.generateCategoryViewModels()
-    }
-    
-    func seriesVideoModels() -> [[VideoViewModel]] {
+        let storeCategories = self.storeage.categories()
         
-        return DevUtiltiies.generateSeriesViewModels()
+        let categoryViewModels = storeCategories.map {
+            return CategoryViewModel(category: $0)
+        }
+        
+        return categoryViewModels
     }
     
-    
-   
-
+    func seriesViewModels(for video: String) -> [VideoViewModel] {
+        
+        let seriesVideos = self.storeage.series(for: video)
+        
+        let seriesViewModels = seriesVideos.map {
+            return VideoViewModel(video: $0)
+        }
+        
+        return seriesViewModels
+    }
 }

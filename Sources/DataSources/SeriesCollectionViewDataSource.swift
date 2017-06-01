@@ -11,9 +11,9 @@ import UIKit
 
 class SeriesCollectionViewDataSource: NSObject {
     
-    let videoViewModels: [[VideoViewModel]]
+    let videoViewModels: [VideoViewModel]
     
-    init(videoViewModels: [[VideoViewModel]]) {
+    init(videoViewModels: [VideoViewModel]) {
         
         self.videoViewModels = videoViewModels
         
@@ -30,15 +30,12 @@ extension SeriesCollectionViewDataSource: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        let series = videoViewModels[section]
-        
-        return series.count
+        return videoViewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let series = videoViewModels[indexPath.section]
-        let episode = series[indexPath.row]
+        let episode = videoViewModels[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "episode_cell", for: indexPath) as! EpisodeCollectionViewCell
         

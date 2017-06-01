@@ -11,9 +11,9 @@ import UIKit
 
 class SeriesCollectionViewDelegate: NSObject {
  
-    let videoViewModels: [[VideoViewModel]]
+    let videoViewModels: [VideoViewModel]
     
-    init(videoViewModels: [[VideoViewModel]]) {
+    init(videoViewModels: [VideoViewModel]) {
         
         self.videoViewModels = videoViewModels
         

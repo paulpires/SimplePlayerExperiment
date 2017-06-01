@@ -19,9 +19,13 @@ class AppRouter {
     fileprivate var detailNavigationController: UINavigationController!
     fileprivate var menuViewController: MenuViewController!
     fileprivate var categoryViewController: CategoryViewController!
-    
+
     fileprivate var provider: Provider = {
-        return Provider(storeage: "test", networkAPI: "")
+        
+        let storage = PersistentStore()
+        let networkClient = "Netowrk client will go here"
+        
+        return Provider(storeage: storage, networkAPI: networkClient)
     }()
     
     init(appLaunchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
@@ -68,10 +72,10 @@ class AppRouter {
 // MARK: - View controller presenting
 extension AppRouter {
     
-    public func showSeriesViewController(for video: Video) {
+    public func showVideoDetailsViewController(for video: Video) {
     
-        let seriesViewController = SeriesViewController(provider: self.provider)
-        splitViewController.present(seriesViewController, animated: true, completion: nil)
+        let videoDetailsViewController = VideoDetailsViewController(provider: self.provider)
+        splitViewController.present(videoDetailsViewController, animated: true, completion: nil)
     }
 }
 
@@ -88,7 +92,7 @@ extension AppRouter: CategoryViewControllerDelegate {
     
     public func categoryViewController(_ categoryViewController: CategoryViewController, didSelect video: Video) {
        
-        showSeriesViewController(for: video)
+        showVideoDetailsViewController(for: video)
     }
 }
 

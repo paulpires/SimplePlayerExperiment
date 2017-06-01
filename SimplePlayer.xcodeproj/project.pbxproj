@@ -21,11 +21,13 @@
 		CF5C6D5D1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5C6D5C1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift */; };
 		CF6B1F921EB8EA2600F73CE2 /* CoreAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */; };
 		CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */; };
+		CF743DA81EE058E400497093 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF743DA71EE058E400497093 /* Store.swift */; };
+		CF743DAB1EE05AC700497093 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF743DAA1EE05AC700497093 /* PersistentStore.swift */; };
 		CF84F7D51EDEF13A000F15A1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84F7D41EDEF13A000F15A1 /* Category.swift */; };
 		CF84F7D71EDEF195000F15A1 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84F7D61EDEF195000F15A1 /* CategoryViewModel.swift */; };
 		CF8A40FD1ED2EC4E00ADAA9C /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */; };
 		CF8A40FF1ED2F70900ADAA9C /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A40FE1ED2F70900ADAA9C /* CategoryViewController.xib */; };
-		CF8A41031ED2F85100ADAA9C /* SeriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A41021ED2F85100ADAA9C /* SeriesViewController.xib */; };
+		CF8A41031ED2F85100ADAA9C /* VideoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A41021ED2F85100ADAA9C /* VideoDetailsViewController.xib */; };
 		CF8A410E1ED3287300ADAA9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A410C1ED3287300ADAA9C /* AppDelegate.swift */; };
 		CF8A410F1ED3287300ADAA9C /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A410D1ED3287300ADAA9C /* AppRouter.swift */; };
 		CF8A41111ED3383700ADAA9C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A41101ED3383700ADAA9C /* Provider.swift */; };
@@ -40,7 +42,7 @@
 		CFBE430F1EBB8AE000C19AC6 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE430E1EBB8AE000C19AC6 /* SplitViewController.swift */; };
 		CFBE43151EBCB87D00C19AC6 /* IconAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFBE43141EBCB87D00C19AC6 /* IconAssets.xcassets */; };
 		CFD2EB5F1ECA052A00D3F1A7 /* CellAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD2EB5E1ECA052A00D3F1A7 /* CellAssets.xcassets */; };
-		CFD2EB621ECB39AD00D3F1A7 /* SeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2EB611ECB39AD00D3F1A7 /* SeriesViewController.swift */; };
+		CFD2EB621ECB39AD00D3F1A7 /* VideoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2EB611ECB39AD00D3F1A7 /* VideoDetailsViewController.swift */; };
 		CFD5AD1A1EBB3C0B00FAC6DE /* CategorySectionHeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD5AD191EBB3C0B00FAC6DE /* CategorySectionHeaderSupplementaryView.swift */; };
 		CFD5AD1D1EBB400300FAC6DE /* DevUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD5AD1C1EBB400300FAC6DE /* DevUtilities.swift */; };
 		CFEBC6EF1EC9B97000E50B7E /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFEBC6EE1EC9B97000E50B7E /* MenuCollectionViewCell.xib */; };
@@ -95,11 +97,13 @@
 		CF5C6D5A1EB9CE1400F1BB5C /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
 		CF5C6D5C1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortraitPosterCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CoreAssets.xcassets; sourceTree = "<group>"; };
+		CF743DA71EE058E400497093 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		CF743DAA1EE05AC700497093 /* PersistentStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		CF84F7D41EDEF13A000F15A1 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CF84F7D61EDEF195000F15A1 /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		CF8A40FE1ED2F70900ADAA9C /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
-		CF8A41021ED2F85100ADAA9C /* SeriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeriesViewController.xib; sourceTree = "<group>"; };
+		CF8A41021ED2F85100ADAA9C /* VideoDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoDetailsViewController.xib; sourceTree = "<group>"; };
 		CF8A410C1ED3287300ADAA9C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF8A410D1ED3287300ADAA9C /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		CF8A41101ED3383700ADAA9C /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
@@ -114,7 +118,7 @@
 		CFBE430E1EBB8AE000C19AC6 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		CFBE43141EBCB87D00C19AC6 /* IconAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = IconAssets.xcassets; sourceTree = "<group>"; };
 		CFD2EB5E1ECA052A00D3F1A7 /* CellAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CellAssets.xcassets; sourceTree = "<group>"; };
-		CFD2EB611ECB39AD00D3F1A7 /* SeriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesViewController.swift; sourceTree = "<group>"; };
+		CFD2EB611ECB39AD00D3F1A7 /* VideoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetailsViewController.swift; sourceTree = "<group>"; };
 		CFD5AD191EBB3C0B00FAC6DE /* CategorySectionHeaderSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionHeaderSupplementaryView.swift; sourceTree = "<group>"; };
 		CFD5AD1C1EBB400300FAC6DE /* DevUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevUtilities.swift; sourceTree = "<group>"; };
 		CFEBC6EE1EC9B97000E50B7E /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -177,6 +181,14 @@
 				34745CF96F4A5D049E490B69 /* Pods_SimplePlayerUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF743DA91EE05A9D00497093 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				CF743DAA1EE05AC700497093 /* PersistentStore.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		CF8A410A1ED3285D00ADAA9C /* Data */ = {
@@ -273,6 +285,7 @@
 				CFFE07C41EB8E79000D7E9C9 /* Protocols */,
 				CFFE07C51EB8E79000D7E9C9 /* Resources */,
 				CFFE07C61EB8E79000D7E9C9 /* ViewControllers */,
+				CF743DA91EE05A9D00497093 /* Storage */,
 				CFFE07BA1EB8E79000D7E9C9 /* Cells */,
 			);
 			path = Sources;
@@ -329,6 +342,7 @@
 			children = (
 				CFBE430A1EBB886000C19AC6 /* ViewModel.swift */,
 				CFBE43081EBB884E00C19AC6 /* ViewModelDisplayable.swift */,
+				CF743DA71EE058E400497093 /* Store.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -352,8 +366,8 @@
 				CF8A40FE1ED2F70900ADAA9C /* CategoryViewController.xib */,
 				CFFE07C81EB8E79000D7E9C9 /* MenuViewController.swift */,
 				CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */,
-				CFD2EB611ECB39AD00D3F1A7 /* SeriesViewController.swift */,
-				CF8A41021ED2F85100ADAA9C /* SeriesViewController.xib */,
+				CFD2EB611ECB39AD00D3F1A7 /* VideoDetailsViewController.swift */,
+				CF8A41021ED2F85100ADAA9C /* VideoDetailsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -501,7 +515,7 @@
 				CF8A40FF1ED2F70900ADAA9C /* CategoryViewController.xib in Resources */,
 				CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */,
 				CFEBC6EF1EC9B97000E50B7E /* MenuCollectionViewCell.xib in Resources */,
-				CF8A41031ED2F85100ADAA9C /* SeriesViewController.xib in Resources */,
+				CF8A41031ED2F85100ADAA9C /* VideoDetailsViewController.xib in Resources */,
 				CF8A40FD1ED2EC4E00ADAA9C /* MenuViewController.xib in Resources */,
 				CFEBC6F51EC9BB4B00E50B7E /* CategorySectionHeaderSupplementaryView.xib in Resources */,
 				CFEBC6F11EC9BA1F00E50B7E /* PortraitPosterCollectionViewCell.xib in Resources */,
@@ -682,6 +696,7 @@
 				CF84F7D71EDEF195000F15A1 /* CategoryViewModel.swift in Sources */,
 				CF8F69691EC5F5E100FFADD8 /* MenuCollectionViewDelegate.swift in Sources */,
 				CF8A41111ED3383700ADAA9C /* Provider.swift in Sources */,
+				CF743DAB1EE05AC700497093 /* PersistentStore.swift in Sources */,
 				CF8F69651EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift in Sources */,
 				CFBE430D1EBB889300C19AC6 /* CategoryCollectionViewMetrics.swift in Sources */,
 				CFBE430F1EBB8AE000C19AC6 /* SplitViewController.swift in Sources */,
@@ -693,10 +708,11 @@
 				CFFE07D01EB8E79000D7E9C9 /* MenuCollectionViewCell.swift in Sources */,
 				CF18D9421ECC9C630028BE5C /* SeriesCollectionViewDelegate.swift in Sources */,
 				CFFE07D41EB8E79000D7E9C9 /* MenuItem.swift in Sources */,
+				CF743DA81EE058E400497093 /* Store.swift in Sources */,
 				CFFE07DA1EB8E8D700D7E9C9 /* MenuItemViewModel.swift in Sources */,
 				CFBE43001EBB628F00C19AC6 /* LargeLandscapePosterCollectionViewCell.swift in Sources */,
 				CFBE43091EBB884E00C19AC6 /* ViewModelDisplayable.swift in Sources */,
-				CFD2EB621ECB39AD00D3F1A7 /* SeriesViewController.swift in Sources */,
+				CFD2EB621ECB39AD00D3F1A7 /* VideoDetailsViewController.swift in Sources */,
 				CF8A410E1ED3287300ADAA9C /* AppDelegate.swift in Sources */,
 				CFFE07DB1EB8E8D700D7E9C9 /* VideoViewModel.swift in Sources */,
 				CFD5AD1D1EBB400300FAC6DE /* DevUtilities.swift in Sources */,

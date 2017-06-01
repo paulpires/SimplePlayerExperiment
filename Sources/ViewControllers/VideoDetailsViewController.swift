@@ -1,5 +1,5 @@
 //
-//  SeriesViewController.swift
+//  VideoDetailsViewControllerV.swift
 //  SimplePlayer
 //
 //  Created by Kemal Enver on 16/05/2017.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SeriesViewController: UIViewController {
+class VideoDetailsViewController: UIViewController {
     
     @IBOutlet var closeButton: UIButton! {
         didSet {
@@ -23,7 +23,7 @@ class SeriesViewController: UIViewController {
     
     let provider: Provider
     
-    var videoViewModels = [[VideoViewModel]]() {
+    var videoViewModels = [VideoViewModel]() {
         
         didSet {
             
@@ -44,7 +44,7 @@ class SeriesViewController: UIViewController {
     } 
 }
 
-extension SeriesViewController {
+extension VideoDetailsViewController {
     
     override func viewDidLoad() {
         
@@ -57,7 +57,7 @@ extension SeriesViewController {
     }
 }
 
-extension SeriesViewController {
+extension VideoDetailsViewController {
     
     @objc fileprivate func closePressed() {
         
@@ -65,11 +65,11 @@ extension SeriesViewController {
     }
 }
 
-extension SeriesViewController {
+extension VideoDetailsViewController {
     
     fileprivate func updateData() {
         
-        videoViewModels = provider.seriesVideoModels()
+        videoViewModels = provider.seriesViewModels(for: "xxx")
     }
     
     fileprivate func setupControllerDetails() {
@@ -77,7 +77,7 @@ extension SeriesViewController {
         self.title = "Series Data"
     }
     
-    fileprivate func reloadWith(oldData: [[VideoViewModel]], newData: [[VideoViewModel]]) {
+    fileprivate func reloadWith(oldData: [VideoViewModel], newData: [VideoViewModel]) {
         
         self.collectionViewDataSource =  SeriesCollectionViewDataSource(videoViewModels: videoViewModels)
         self.collectionViewDelegate = SeriesCollectionViewDelegate(videoViewModels: videoViewModels)

@@ -74,7 +74,7 @@ extension MenuViewController {
     
     fileprivate func reloadWith(oldData: [MenuItemViewModel], newData: [MenuItemViewModel]) {
         
-        let menuViewModels = DevUtiltiies.generateMenuViewModels()
+        let menuViewModels = self.provider.menuViewModels()
         
         collectionViewDataSource =  MenuCollectionViewDataSource(menuItemViewModels: menuViewModels)
         collectionViewDelegate = MenuCollectionViewDelegate(menuItemViewModels: menuViewModels, menuViewController: self)
