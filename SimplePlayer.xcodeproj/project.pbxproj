@@ -23,6 +23,8 @@
 		CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE07B61EB8E79000D7E9C9 /* LaunchScreen.storyboard */; };
 		CF743DA81EE058E400497093 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF743DA71EE058E400497093 /* Store.swift */; };
 		CF743DAB1EE05AC700497093 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF743DAA1EE05AC700497093 /* PersistentStore.swift */; };
+		CF743DAF1EE06F6400497093 /* VideosClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF743DAE1EE06F6400497093 /* VideosClient.swift */; };
+		CF743DB11EE0700A00497093 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF743DB01EE0700A00497093 /* NetworkClient.swift */; };
 		CF84F7D51EDEF13A000F15A1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84F7D41EDEF13A000F15A1 /* Category.swift */; };
 		CF84F7D71EDEF195000F15A1 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84F7D61EDEF195000F15A1 /* CategoryViewModel.swift */; };
 		CF8A40FD1ED2EC4E00ADAA9C /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */; };
@@ -99,6 +101,8 @@
 		CF6B1F911EB8EA2600F73CE2 /* CoreAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CoreAssets.xcassets; sourceTree = "<group>"; };
 		CF743DA71EE058E400497093 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		CF743DAA1EE05AC700497093 /* PersistentStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		CF743DAE1EE06F6400497093 /* VideosClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosClient.swift; sourceTree = "<group>"; };
+		CF743DB01EE0700A00497093 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		CF84F7D41EDEF13A000F15A1 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CF84F7D61EDEF195000F15A1 /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -333,6 +337,7 @@
 		CFFE07C31EB8E79000D7E9C9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				CF743DAE1EE06F6400497093 /* VideosClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				CFBE430A1EBB886000C19AC6 /* ViewModel.swift */,
 				CFBE43081EBB884E00C19AC6 /* ViewModelDisplayable.swift */,
 				CF743DA71EE058E400497093 /* Store.swift */,
+				CF743DB01EE0700A00497093 /* NetworkClient.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -699,6 +705,7 @@
 				CF743DAB1EE05AC700497093 /* PersistentStore.swift in Sources */,
 				CF8F69651EC5EEB200FFADD8 /* CategoryCollectionViewDelegate.swift in Sources */,
 				CFBE430D1EBB889300C19AC6 /* CategoryCollectionViewMetrics.swift in Sources */,
+				CF743DB11EE0700A00497093 /* NetworkClient.swift in Sources */,
 				CFBE430F1EBB8AE000C19AC6 /* SplitViewController.swift in Sources */,
 				CF5C6D5D1EB9D07A00F1BB5C /* PortraitPosterCollectionViewCell.swift in Sources */,
 				CF84F7D51EDEF13A000F15A1 /* Category.swift in Sources */,
@@ -706,6 +713,7 @@
 				CF8A410F1ED3287300ADAA9C /* AppRouter.swift in Sources */,
 				CFBE430B1EBB886000C19AC6 /* ViewModel.swift in Sources */,
 				CFFE07D01EB8E79000D7E9C9 /* MenuCollectionViewCell.swift in Sources */,
+				CF743DAF1EE06F6400497093 /* VideosClient.swift in Sources */,
 				CF18D9421ECC9C630028BE5C /* SeriesCollectionViewDelegate.swift in Sources */,
 				CFFE07D41EB8E79000D7E9C9 /* MenuItem.swift in Sources */,
 				CF743DA81EE058E400497093 /* Store.swift in Sources */,
