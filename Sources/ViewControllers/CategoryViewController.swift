@@ -19,7 +19,6 @@ class CategoryViewController: UIViewController {
         
         didSet {
             
-            collectionView.backgroundColor = CategoryViewControllerDesign.Colors.backgroundColor
             collectionView.contentInset = CategoryViewControllerDesign.Sizes.controllerInsets
         }
     }

@@ -21,9 +21,4 @@ struct CategoryViewControllerDesign {
         
         static let controllerInsets = UIEdgeInsets(top: cellRowSpacing, left: cellInterimSpacing, bottom: cellRowSpacing, right: cellInterimSpacing)
     }
-    
-    struct Colors {
-        
-        static let backgroundColor: UIColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
-    }
 }

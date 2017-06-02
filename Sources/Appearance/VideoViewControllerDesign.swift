@@ -14,9 +14,4 @@ struct VideoViewControllerDesign {
     struct Sizes {
         
     }
-    
-    struct Colors {
-        
-        static let backgroundColor: UIColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
-    }
 }

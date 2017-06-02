@@ -30,11 +30,21 @@
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="sW0-15-8U0"/>
                         </constraints>
-                        <string key="text">Line 1
-Line 2
-Line 3</string>
+                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quam risus, faucibus ac metus sit amet, eleifend dictum lacus. Vivamus suscipit dolor id iaculis interdum. Fusce eget porttitor quam. Etiam volutpat volutpat mattis. Aliquam rutrum elit eget feugiat gravida. Nunc posuere in ex nec ultricies. Donec porta vel sapien ac tempor. Fusce finibus imperdiet mollis. Quisque in ante placerat, lobortis enim gravida, egestas turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla maximus eros a purus gravida tristique. In pulvinar risus eros, in aliquam sapien ullamcorper ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis mi mauris, ac pretium dui placerat ut.</mutableString>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.Title of the episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQK-Bn-Saa">
+                        <rect key="frame" x="140" y="25" width="705" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV6-iX-PuY">
+                        <rect key="frame" x="140" y="51" width="705" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -44,7 +54,13 @@ Line 3</string>
                 <constraint firstItem="vXh-NE-FX6" firstAttribute="top" secondItem="xj6-KA-b3u" secondAttribute="bottom" constant="5" id="2F1-5H-Wyd"/>
                 <constraint firstItem="xj6-KA-b3u" firstAttribute="top" secondItem="mtN-q6-iVn" secondAttribute="top" constant="5" id="2a8-aq-DPT"/>
                 <constraint firstItem="vXh-NE-FX6" firstAttribute="leading" secondItem="mtN-q6-iVn" secondAttribute="leading" constant="5" id="35v-xj-7U3"/>
+                <constraint firstItem="vV6-iX-PuY" firstAttribute="leading" secondItem="xj6-KA-b3u" secondAttribute="trailing" constant="5" id="6ig-jM-zEg"/>
+                <constraint firstItem="vV6-iX-PuY" firstAttribute="top" secondItem="vQK-Bn-Saa" secondAttribute="bottom" constant="5" id="An4-xc-9jn"/>
+                <constraint firstItem="vQK-Bn-Saa" firstAttribute="centerY" secondItem="xj6-KA-b3u" secondAttribute="centerY" constant="-10" id="BOw-Ip-X0P"/>
                 <constraint firstItem="xj6-KA-b3u" firstAttribute="leading" secondItem="mtN-q6-iVn" secondAttribute="leading" constant="5" id="Bif-9U-E6g"/>
+                <constraint firstAttribute="trailing" secondItem="vQK-Bn-Saa" secondAttribute="trailing" constant="5" id="Nqa-0r-dQN"/>
+                <constraint firstAttribute="trailing" secondItem="vV6-iX-PuY" secondAttribute="trailing" constant="5" id="c0y-aj-EXz"/>
+                <constraint firstItem="vQK-Bn-Saa" firstAttribute="leading" secondItem="xj6-KA-b3u" secondAttribute="trailing" constant="5" id="dVR-uo-EFj"/>
                 <constraint firstAttribute="trailing" secondItem="vXh-NE-FX6" secondAttribute="trailing" constant="5" id="kxG-Aa-hvz"/>
             </constraints>
             <size key="customSize" width="850" height="136"/>
