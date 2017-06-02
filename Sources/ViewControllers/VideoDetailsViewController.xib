@@ -32,14 +32,13 @@
                     </collectionViewFlowLayout>
                     <cells/>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-oG-zxb">
-                    <rect key="frame" x="677" y="50" width="39" height="30"/>
-                    <color key="backgroundColor" red="0.0" green="0.1182139549506922" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGz-oG-zxb">
+                    <rect key="frame" x="687" y="20" width="44" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="j2U-FH-4Cf"/>
-                        <constraint firstAttribute="width" constant="39" id="ukd-Lo-V0o"/>
+                        <constraint firstAttribute="height" constant="44" id="j2U-FH-4Cf"/>
+                        <constraint firstAttribute="width" constant="44" id="ukd-Lo-V0o"/>
                     </constraints>
-                    <state key="normal" title="Close">
+                    <state key="normal" title="Close" image="close_icon">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
@@ -47,13 +46,16 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="hGz-oG-zxb" firstAttribute="top" secondItem="cMh-nt-xhq" secondAttribute="top" constant="50" id="8HJ-Dl-4ir"/>
+                <constraint firstItem="hGz-oG-zxb" firstAttribute="top" secondItem="cMh-nt-xhq" secondAttribute="top" constant="20" id="8HJ-Dl-4ir"/>
                 <constraint firstAttribute="bottom" secondItem="sE1-ia-EYZ" secondAttribute="bottom" id="F25-gK-r9T"/>
                 <constraint firstItem="sE1-ia-EYZ" firstAttribute="leading" secondItem="cMh-nt-xhq" secondAttribute="leading" id="JXt-GX-Xb0"/>
                 <constraint firstAttribute="trailing" secondItem="sE1-ia-EYZ" secondAttribute="trailing" id="b72-Bn-C1L"/>
-                <constraint firstAttribute="trailing" secondItem="hGz-oG-zxb" secondAttribute="trailing" constant="20" id="duI-6M-jm8"/>
+                <constraint firstAttribute="trailing" secondItem="hGz-oG-zxb" secondAttribute="trailing" constant="5" id="duI-6M-jm8"/>
                 <constraint firstItem="sE1-ia-EYZ" firstAttribute="top" secondItem="cMh-nt-xhq" secondAttribute="top" id="yei-6a-aXC"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="close_icon" width="44" height="44"/>
+    </resources>
 </document>

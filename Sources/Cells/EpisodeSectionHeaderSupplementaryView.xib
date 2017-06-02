@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,23 +12,37 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header_supplementary_view" id="kbd-P8-zqL" customClass="EpisodeSectionHeaderSupplementaryView" customModule="SimplePlayer" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="427" height="260"/>
+            <rect key="frame" x="0.0" y="0.0" width="482" height="380"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape_large2" translatesAutoresizingMaskIntoConstraints="NO" id="Wde-rf-L9W">
-                    <rect key="frame" x="0.0" y="0.0" width="427" height="260"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape_large3" translatesAutoresizingMaskIntoConstraints="NO" id="Wde-rf-L9W">
+                    <rect key="frame" x="0.0" y="0.0" width="482" height="280"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVm-sK-bhz">
+                    <rect key="frame" x="5" y="280" width="472" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="vG1-TX-p2K"/>
+                    </constraints>
+                    <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt neque non ligula porttitor commodo. Donec molestie lorem vitae quam accumsan, nec ultrices mi scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sollicitudin urna ac nunc fermentum, volutpat scelerisque tellus lacinia. Nulla facilisi. Nam sed ante ac tortor varius rhoncus non quis risus. Etiam suscipit ut urna id imperdiet. Nullam et eleifend velit. Nulla dignissim a quam id cursus. Vivamus mattis erat in porttitor pharetra. Nam quis orci vel est laoreet convallis in non lectus. Duis tincidunt volutpat orci, at luctus tortor. Mauris commodo eleifend erat vitae interdum.</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
+            <color key="backgroundColor" red="0.34919874490000002" green="0.81634676399999995" blue="0.24692990000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Wde-rf-L9W" firstAttribute="leading" secondItem="kbd-P8-zqL" secondAttribute="leading" id="9zH-Ro-Icq"/>
-                <constraint firstAttribute="trailing" secondItem="Wde-rf-L9W" secondAttribute="trailing" id="ktN-ub-t4H"/>
-                <constraint firstItem="Wde-rf-L9W" firstAttribute="top" secondItem="kbd-P8-zqL" secondAttribute="top" id="sfw-8N-tbf"/>
-                <constraint firstAttribute="bottom" secondItem="Wde-rf-L9W" secondAttribute="bottom" id="uDl-xf-A1D"/>
+                <constraint firstItem="Wde-rf-L9W" firstAttribute="leading" secondItem="kbd-P8-zqL" secondAttribute="leading" id="0hv-M9-8cP"/>
+                <constraint firstAttribute="bottom" secondItem="tVm-sK-bhz" secondAttribute="bottom" id="4sg-XS-3CE"/>
+                <constraint firstAttribute="trailing" secondItem="tVm-sK-bhz" secondAttribute="trailing" constant="5" id="Zlk-ka-rhc"/>
+                <constraint firstItem="tVm-sK-bhz" firstAttribute="top" secondItem="Wde-rf-L9W" secondAttribute="bottom" id="dYi-rr-lP2"/>
+                <constraint firstAttribute="trailing" secondItem="Wde-rf-L9W" secondAttribute="trailing" id="fBY-Tm-MPL"/>
+                <constraint firstItem="tVm-sK-bhz" firstAttribute="leading" secondItem="kbd-P8-zqL" secondAttribute="leading" constant="5" id="hc0-bG-Hq1"/>
+                <constraint firstItem="Wde-rf-L9W" firstAttribute="top" secondItem="kbd-P8-zqL" secondAttribute="top" id="tXM-Pd-Ouu"/>
             </constraints>
-            <point key="canvasLocation" x="-64.5" y="-210"/>
+            <point key="canvasLocation" x="-116" y="-177"/>
         </collectionReusableView>
     </objects>
     <resources>
-        <image name="landscape_large2" width="640" height="360"/>
+        <image name="landscape_large3" width="640" height="360"/>
     </resources>
 </document>

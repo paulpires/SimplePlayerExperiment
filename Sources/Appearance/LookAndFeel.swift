@@ -50,6 +50,7 @@ struct LookAndFeel {
         UICollectionView.appearance(whenContainedInInstancesOf: [appearanceContainer]).backgroundColor = backgroundColor
         
         EpisodeCollectionViewCell.appearance(whenContainedInInstancesOf: [appearanceContainer]).backgroundColor = backgroundColor
+        EpisodeSectionHeaderSupplementaryView.appearance(whenContainedInInstancesOf: [appearanceContainer]).backgroundColor = backgroundColor
         
         UILabel.appearance(whenContainedInInstancesOf: [EpisodeCollectionViewCell.self]).textColor = .white
         

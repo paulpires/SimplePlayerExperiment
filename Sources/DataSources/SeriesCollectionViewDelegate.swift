@@ -30,7 +30,7 @@ extension SeriesCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
         let width = collectionView.bounds.width
-        let height: CGFloat = 250
+        let height: CGFloat = (width * 0.6) + 100
         
         return CGSize(width: width, height: height)
     }
@@ -48,7 +48,7 @@ extension SeriesCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width: CGFloat = collectionView.bounds.width
-        let height: CGFloat = 136
+        let height: CGFloat = 148
         
         return CGSize(width: width, height: height)
     }

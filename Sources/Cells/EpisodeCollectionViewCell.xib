@@ -12,62 +12,72 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="episode_cell" id="mtN-q6-iVn" customClass="EpisodeCollectionViewCell" customModule="SimplePlayer" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="850" height="136"/>
+            <rect key="frame" x="0.0" y="0.0" width="850" height="148"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="850" height="136"/>
+                <rect key="frame" x="0.0" y="0.0" width="850" height="148"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xj6-KA-b3u">
-                        <rect key="frame" x="5" y="5" width="130" height="80"/>
+                        <rect key="frame" x="5" y="10" width="130" height="80"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="5ek-4k-99i"/>
                             <constraint firstAttribute="width" constant="130" id="apc-ZI-hKz"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXh-NE-FX6">
-                        <rect key="frame" x="5" y="90" width="840" height="43"/>
+                        <rect key="frame" x="5" y="100" width="840" height="43"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="sW0-15-8U0"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="sW0-15-8U0"/>
                         </constraints>
-                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quam risus, faucibus ac metus sit amet, eleifend dictum lacus. Vivamus suscipit dolor id iaculis interdum. Fusce eget porttitor quam. Etiam volutpat volutpat mattis. Aliquam rutrum elit eget feugiat gravida. Nunc posuere in ex nec ultricies. Donec porta vel sapien ac tempor. Fusce finibus imperdiet mollis. Quisque in ante placerat, lobortis enim gravida, egestas turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla maximus eros a purus gravida tristique. In pulvinar risus eros, in aliquam sapien ullamcorper ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis mi mauris, ac pretium dui placerat ut.</mutableString>
+                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quam risus, faucibus ac metus sit amet, eleifend dictum lacus. Vivamus suscipit dolor id iaculis interdum. Fusce eget porttitor quam. Etiam volutpat volutpat mattis. Aliquam rutrum elit eget feugiat gravida. Nunc posuere in ex nec ultricies. Donec porta vel sapien ac tempor. Fusce finibus imperdiet mollis. Quisque in ante placerat, lobortis enim gravida, egestas turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla maximus eros a purus gravida tristique. In pulvinar risus eros, in aliquam sapien ullamcorper ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum lobortis mi mauris, ac pretium dui placerat ut.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.Title of the episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQK-Bn-Saa">
-                        <rect key="frame" x="140" y="25" width="705" height="20.5"/>
+                        <rect key="frame" x="140" y="30" width="656" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV6-iX-PuY">
-                        <rect key="frame" x="140" y="51" width="705" height="15"/>
+                        <rect key="frame" x="140" y="56" width="705" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEl-Sn-JIt">
+                        <rect key="frame" x="801" y="18.5" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="gzL-ty-zFr"/>
+                            <constraint firstAttribute="width" constant="44" id="oTB-9u-AV1"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="vXh-NE-FX6" firstAttribute="top" secondItem="xj6-KA-b3u" secondAttribute="bottom" constant="5" id="2F1-5H-Wyd"/>
-                <constraint firstItem="xj6-KA-b3u" firstAttribute="top" secondItem="mtN-q6-iVn" secondAttribute="top" constant="5" id="2a8-aq-DPT"/>
+                <constraint firstItem="vXh-NE-FX6" firstAttribute="top" secondItem="xj6-KA-b3u" secondAttribute="bottom" constant="10" id="2F1-5H-Wyd"/>
+                <constraint firstItem="xj6-KA-b3u" firstAttribute="top" secondItem="mtN-q6-iVn" secondAttribute="top" constant="10" id="2a8-aq-DPT"/>
                 <constraint firstItem="vXh-NE-FX6" firstAttribute="leading" secondItem="mtN-q6-iVn" secondAttribute="leading" constant="5" id="35v-xj-7U3"/>
                 <constraint firstItem="vV6-iX-PuY" firstAttribute="leading" secondItem="xj6-KA-b3u" secondAttribute="trailing" constant="5" id="6ig-jM-zEg"/>
                 <constraint firstItem="vV6-iX-PuY" firstAttribute="top" secondItem="vQK-Bn-Saa" secondAttribute="bottom" constant="5" id="An4-xc-9jn"/>
                 <constraint firstItem="vQK-Bn-Saa" firstAttribute="centerY" secondItem="xj6-KA-b3u" secondAttribute="centerY" constant="-10" id="BOw-Ip-X0P"/>
                 <constraint firstItem="xj6-KA-b3u" firstAttribute="leading" secondItem="mtN-q6-iVn" secondAttribute="leading" constant="5" id="Bif-9U-E6g"/>
-                <constraint firstAttribute="trailing" secondItem="vQK-Bn-Saa" secondAttribute="trailing" constant="5" id="Nqa-0r-dQN"/>
+                <constraint firstItem="hEl-Sn-JIt" firstAttribute="centerY" secondItem="vQK-Bn-Saa" secondAttribute="centerY" id="GFc-Xq-0w5"/>
+                <constraint firstItem="hEl-Sn-JIt" firstAttribute="leading" secondItem="vQK-Bn-Saa" secondAttribute="trailing" constant="5" id="Zr4-ev-chw"/>
                 <constraint firstAttribute="trailing" secondItem="vV6-iX-PuY" secondAttribute="trailing" constant="5" id="c0y-aj-EXz"/>
                 <constraint firstItem="vQK-Bn-Saa" firstAttribute="leading" secondItem="xj6-KA-b3u" secondAttribute="trailing" constant="5" id="dVR-uo-EFj"/>
                 <constraint firstAttribute="trailing" secondItem="vXh-NE-FX6" secondAttribute="trailing" constant="5" id="kxG-Aa-hvz"/>
+                <constraint firstAttribute="trailing" secondItem="hEl-Sn-JIt" secondAttribute="trailing" constant="5" id="n1H-jV-I67"/>
             </constraints>
-            <size key="customSize" width="850" height="136"/>
+            <size key="customSize" width="850" height="151"/>
             <connections>
                 <outlet property="episodeImageView" destination="xj6-KA-b3u" id="COi-lt-VVQ"/>
             </connections>
-            <point key="canvasLocation" x="147" y="-76"/>
+            <point key="canvasLocation" x="147" y="-69"/>
         </collectionViewCell>
     </objects>
 </document>
