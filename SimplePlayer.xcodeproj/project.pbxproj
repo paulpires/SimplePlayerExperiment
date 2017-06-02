@@ -25,6 +25,8 @@
 		CF743DAB1EE05AC700497093 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF743DAA1EE05AC700497093 /* PersistentStore.swift */; };
 		CF743DAF1EE06F6400497093 /* VideosClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF743DAE1EE06F6400497093 /* VideosClient.swift */; };
 		CF743DB11EE0700A00497093 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF743DB01EE0700A00497093 /* NetworkClient.swift */; };
+		CF743DB41EE1B92100497093 /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = CF743DB31EE1B92100497093 /* videos.json */; };
+		CF743DB61EE1B94700497093 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = CF743DB51EE1B94700497093 /* menu.json */; };
 		CF84F7D51EDEF13A000F15A1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84F7D41EDEF13A000F15A1 /* Category.swift */; };
 		CF84F7D71EDEF195000F15A1 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84F7D61EDEF195000F15A1 /* CategoryViewModel.swift */; };
 		CF8A40FD1ED2EC4E00ADAA9C /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */; };
@@ -103,6 +105,8 @@
 		CF743DAA1EE05AC700497093 /* PersistentStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		CF743DAE1EE06F6400497093 /* VideosClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosClient.swift; sourceTree = "<group>"; };
 		CF743DB01EE0700A00497093 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		CF743DB31EE1B92100497093 /* videos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = videos.json; sourceTree = "<group>"; };
+		CF743DB51EE1B94700497093 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 		CF84F7D41EDEF13A000F15A1 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CF84F7D61EDEF195000F15A1 /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		CF8A40FC1ED2EC4E00ADAA9C /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				CFD5AD1C1EBB400300FAC6DE /* DevUtilities.swift */,
+				CF743DB31EE1B92100497093 /* videos.json */,
+				CF743DB51EE1B94700497093 /* menu.json */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -520,9 +526,11 @@
 			files = (
 				CF8A40FF1ED2F70900ADAA9C /* CategoryViewController.xib in Resources */,
 				CF6B1F931EB8EAA200F73CE2 /* LaunchScreen.storyboard in Resources */,
+				CF743DB41EE1B92100497093 /* videos.json in Resources */,
 				CFEBC6EF1EC9B97000E50B7E /* MenuCollectionViewCell.xib in Resources */,
 				CF8A41031ED2F85100ADAA9C /* VideoDetailsViewController.xib in Resources */,
 				CF8A40FD1ED2EC4E00ADAA9C /* MenuViewController.xib in Resources */,
+				CF743DB61EE1B94700497093 /* menu.json in Resources */,
 				CFEBC6F51EC9BB4B00E50B7E /* CategorySectionHeaderSupplementaryView.xib in Resources */,
 				CFEBC6F11EC9BA1F00E50B7E /* PortraitPosterCollectionViewCell.xib in Resources */,
 				CFBE43151EBCB87D00C19AC6 /* IconAssets.xcassets in Resources */,
