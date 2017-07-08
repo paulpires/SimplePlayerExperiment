@@ -10,7 +10,7 @@ import UIKit
 
 class DevUtiltiies {
     
-    public static func capNumber<T: Integer>(val: T, min: T, max: T) -> T {
+    public static func capNumber<T: SignedInteger>(val: T, min: T, max: T) -> T {
         
         let p = max - min + 1;
         let mod = (val - min) % p

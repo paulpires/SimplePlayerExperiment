@@ -9,7 +9,7 @@ target 'SimplePlayer' do
   # Pods for SimplePlayer
 
   pod 'RealmSwift'
-  pod 'Siesta', '~> 1.0'
+  #pod 'Siesta', '~> 1.0'
 
   #pod 'RxSwift',    '~> 3.0'
   #pod 'RxCocoa',    '~> 3.0'

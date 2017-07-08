@@ -25,7 +25,7 @@ struct LookAndFeel {
     private static func applyNavigationBarAppearance() {
         
         UINavigationBar.appearance().tintColor = textTintColor
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : textTintColor]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue : textTintColor]
     }
     
     private static func applyMenuAppearance() {
