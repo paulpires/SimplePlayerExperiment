@@ -18,16 +18,12 @@ class MenuViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     weak var menuViewControllerDelegate: MenuViewControllerDelegate?
-    
     let provider: Provider
     
     fileprivate var collectionViewDataSource: MenuCollectionViewDataSource?
     fileprivate var collectionViewDelegate: MenuCollectionViewDelegate?
-    
     fileprivate var menuItemViewModels = [MenuItemViewModel]() {
-        
         didSet {
-            
             self.reloadWith(oldData: oldValue, newData: menuItemViewModels)
         }
     }
@@ -36,12 +32,10 @@ class MenuViewController: UIViewController {
         
         self.provider = provider
         self.menuViewControllerDelegate = delegate
-        
         super.init(nibName:nil, bundle:nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        
         fatalError("init(coder:) has not been implemented")
     }
 }
@@ -51,10 +45,8 @@ extension MenuViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         setupControllerDetails()
         registerCollectionViewCells()
-        
         updateData()
     }
 }
@@ -81,7 +73,6 @@ extension MenuViewController {
         
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
-        
         collectionView.reloadData()
     }
     

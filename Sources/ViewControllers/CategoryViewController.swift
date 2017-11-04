@@ -16,9 +16,7 @@ protocol CategoryViewControllerDelegate: class {
 class CategoryViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView! {
-        
         didSet {
-            
             collectionView.contentInset = CategoryViewControllerDesign.Sizes.controllerInsets
         }
     }
@@ -26,9 +24,7 @@ class CategoryViewController: UIViewController {
     let provider: Provider
     
     var categoryViewModels = [CategoryViewModel]() {
-        
         didSet {
-            
             self.reloadWith(oldData: oldValue, newData: categoryViewModels)
         }
     }
@@ -39,15 +35,13 @@ class CategoryViewController: UIViewController {
     fileprivate var collectionViewDelegate: CategoryCollectionViewDelegate?
     
     init(provider: Provider, delegate: CategoryViewControllerDelegate) {
-        
+
         self.provider = provider
         self.categoryViewControllerDelegate = delegate
-        
         super.init(nibName:nil, bundle:nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        
         fatalError("init(coder:) has not been implemented")
     }
 }
@@ -57,11 +51,8 @@ extension CategoryViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         setupControllerDetails()
-        
         registerCollectionViewCells()
-        
         updateData()
     }
     
@@ -70,7 +61,6 @@ extension CategoryViewController {
         super.willTransition(to: newCollection, with: coordinator)
         
         coordinator.animate(alongsideTransition: { (context) in
-            
             self.collectionView.collectionViewLayout.invalidateLayout()
         }, completion: nil)
     }
@@ -106,7 +96,6 @@ extension CategoryViewController {
         
         self.collectionView.dataSource = collectionViewDataSource
         self.collectionView.delegate = collectionViewDelegate
-        
         self.collectionView.reloadData()
     }
     

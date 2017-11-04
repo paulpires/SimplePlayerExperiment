@@ -42,11 +42,9 @@ class AppRouter {
 
     private func createViewControllers() {
         
+        splitViewController = SplitViewController()
         menuViewController = MenuViewController(provider: self.provider, delegate: self)
         categoryViewController = CategoryViewController(provider: self.provider, delegate: self)
-        
-        splitViewController = SplitViewController()
-        
         masterNavigationController = UINavigationController(rootViewController: menuViewController)
         detailNavigationController = UINavigationController(rootViewController: categoryViewController)
     }
